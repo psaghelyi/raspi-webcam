@@ -1,0 +1,1709 @@
+<!DOCTYPE html> 
+<html class="no-js" lang="en-US">
+
+
+<!-- Mirrored from codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Jan 2021 17:51:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://codecalamity.com/xmlrpc.php">
+	
+	<script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
+
+	<!-- This site is optimized with the Yoast SEO plugin v15.6.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Raspberry Pi Hardware Accelerated RTSP Camera - Code Calamity</title>
+	<meta name="description" content="Turn your old webcam and raspberry pi into a hardware acclerated IP camera! Then hook them up to your existing or new survelence system." />
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="index.html" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Raspberry Pi Hardware Accelerated RTSP Camera - Code Calamity" />
+	<meta property="og:description" content="Turn your old webcam and raspberry pi into a hardware acclerated IP camera! Then hook them up to your existing or new survelence system." />
+	<meta property="og:url" content="https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/" />
+	<meta property="og:site_name" content="Code Calamity" />
+	<meta property="article:published_time" content="2019-12-05T12:14:00+00:00" />
+	<meta property="article:modified_time" content="2020-08-08T20:01:39+00:00" />
+	<meta property="og:image" content="https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_095554.jpg?fit=2440%2C2440&#038;ssl=1" />
+	<meta property="og:image:width" content="2440" />
+	<meta property="og:image:height" content="2440" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="Chris Griffith">
+	<meta name="twitter:label2" content="Est. reading time">
+	<meta name="twitter:data2" content="18 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://codecalamity.com/#organization","name":"CodeCalamity","url":"https://codecalamity.com/","sameAs":[],"logo":{"@type":"ImageObject","@id":"https://codecalamity.com/#logo","inLanguage":"en-US","url":"https://i1.wp.com/codecalamity.com/wp-content/uploads/2017/10/cc2.png?fit=250%2C250&ssl=1","width":250,"height":250,"caption":"CodeCalamity"},"image":{"@id":"https://codecalamity.com/#logo"}},{"@type":"WebSite","@id":"https://codecalamity.com/#website","url":"https://codecalamity.com/","name":"Code Calamity","description":"Hodgepodges from a coder&#039;s mind","publisher":{"@id":"https://codecalamity.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://codecalamity.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/#primaryimage","inLanguage":"en-US","url":"https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_095554.jpg?fit=2440%2C2440&ssl=1","width":2440,"height":2440},{"@type":"WebPage","@id":"https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/#webpage","url":"https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/","name":"Raspberry Pi Hardware Accelerated RTSP Camera - Code Calamity","isPartOf":{"@id":"https://codecalamity.com/#website"},"primaryImageOfPage":{"@id":"https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/#primaryimage"},"datePublished":"2019-12-05T12:14:00+00:00","dateModified":"2020-08-08T20:01:39+00:00","description":"Turn your old webcam and raspberry pi into a hardware acclerated IP camera! Then hook them up to your existing or new survelence system.","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/"]}]},{"@type":"Article","@id":"https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/#article","isPartOf":{"@id":"https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/#webpage"},"author":{"@id":"https://codecalamity.com/#/schema/person/7a4b567c32886d2e512c486cd92b6fce"},"headline":"Raspberry Pi Hardware Accelerated RTSP Camera","datePublished":"2019-12-05T12:14:00+00:00","dateModified":"2020-08-08T20:01:39+00:00","mainEntityOfPage":{"@id":"https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/#webpage"},"commentCount":13,"publisher":{"@id":"https://codecalamity.com/#organization"},"image":{"@id":"https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/#primaryimage"},"keywords":"acclerated,encoding,ffmpeg,h264,hardware,ip camera,nginx,onvif,pi,raspberry,raspberrypi,raspbian,rtmp,secuirty,surveillance,webcam","articleSection":"Coding,Hardware Build","inLanguage":"en-US","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/#respond"]}]},{"@type":"Person","@id":"https://codecalamity.com/#/schema/person/7a4b567c32886d2e512c486cd92b6fce","name":"Chris Griffith","image":{"@type":"ImageObject","@id":"https://codecalamity.com/#personlogo","inLanguage":"en-US","url":"https://secure.gravatar.com/avatar/e740c7a4333a7b355bec7f6e4ab691ed?s=96&d=blank&r=pg","caption":"Chris Griffith"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='http://secure.gravatar.com/' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel='dns-prefetch' href='http://v0.wordpress.com/' />
+<link rel='dns-prefetch' href='http://i0.wp.com/' />
+<link rel='dns-prefetch' href='http://i1.wp.com/' />
+<link rel='dns-prefetch' href='http://i2.wp.com/' />
+<link rel='dns-prefetch' href='http://jetpack.wordpress.com/' />
+<link rel='dns-prefetch' href='http://s0.wp.com/' />
+<link rel='dns-prefetch' href='http://s1.wp.com/' />
+<link rel='dns-prefetch' href='http://s2.wp.com/' />
+<link rel='dns-prefetch' href='http://public-api.wordpress.com/' />
+<link rel='dns-prefetch' href='http://0.gravatar.com/' />
+<link rel='dns-prefetch' href='http://1.gravatar.com/' />
+<link rel='dns-prefetch' href='http://2.gravatar.com/' />
+<link rel='dns-prefetch' href='http://widgets.wp.com/' />
+<link rel='dns-prefetch' href='http://c0.wp.com/' />
+<link rel="alternate" type="application/rss+xml" title="Code Calamity &raquo; Feed" href="https://codecalamity.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Code Calamity &raquo; Comments Feed" href="https://codecalamity.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Code Calamity &raquo; Raspberry Pi Hardware Accelerated RTSP Camera Comments Feed" href="https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/codecalamity.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://c0.wp.com/c/5.6/wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' />
+<style id='wp-block-library-inline-css' type='text/css'>
+.has-text-align-justify{text-align:justify;}
+</style>
+<link rel='stylesheet' id='responsive-lightbox-swipebox-css'  href='https://codecalamity.com/wp-content/plugins/responsive-lightbox/assets/swipebox/swipebox.min.css?ver=2.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='bg-shce-genericons-css'  href='https://codecalamity.com/wp-content/plugins/show-hidecollapse-expand/assets/css/genericons/genericons.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='bg-show-hide-css'  href='https://codecalamity.com/wp-content/plugins/show-hidecollapse-expand/assets/css/bg-show-hide.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='https://c0.wp.com/c/5.6/wp-includes/css/dashicons.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='achored-header-css'  href='https://codecalamity.com/wp-content/plugins/wp-anchor-header/css/achored-header.css?ver=0.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='ez-icomoon-css'  href='https://codecalamity.com/wp-content/plugins/easy-table-of-contents/vendor/icomoon/style.min.css?ver=2.0.11' type='text/css' media='all' />
+<link rel='stylesheet' id='ez-toc-css'  href='https://codecalamity.com/wp-content/plugins/easy-table-of-contents/assets/css/screen.min.css?ver=2.0.11' type='text/css' media='all' />
+<style id='ez-toc-inline-css' type='text/css'>
+div#ez-toc-container p.ez-toc-title {font-size: 120%;}div#ez-toc-container p.ez-toc-title {font-weight: 500;}div#ez-toc-container ul li {font-size: 95%;}
+</style>
+<link rel='stylesheet' id='minimer-style-css'  href='https://codecalamity.com/wp-content/themes/minimer/style.css?ver=5.6' type='text/css' media='all' />
+<style id='minimer-style-inline-css' type='text/css'>
+body { font-family: "Roboto", Arial, sans-serif; }
+.site-title a, .site-description { color: #020202; }
+
+</style>
+<link rel='stylesheet' id='minimer-responsive-css'  href='https://codecalamity.com/wp-content/themes/minimer/responsive.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='minimer-font-awesome-css'  href='https://codecalamity.com/wp-content/themes/minimer/fonts/all.min.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='roboto-css'  href='http://fonts.googleapis.com/css?family=Roboto%3A400%2C300italic%2C300%2C400italic%2C700&amp;subset=latin%2Clatin-ext&amp;ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-default-css'  href='https://codecalamity.com/wp-content/plugins/tablepress/css/default.min.css?ver=1.12' type='text/css' media='all' />
+<link rel='stylesheet' id='open-sans-css'  href='https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&amp;subset=latin%2Clatin-ext&amp;display=fallback&amp;ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='enlighterjs-css'  href='https://codecalamity.com/wp-content/plugins/enlighter/cache/enlighterjs.min.css?ver=+gY65geVXoabMLM' type='text/css' media='all' />
+<link rel='stylesheet' id='cmplz-cookie-css'  href='https://codecalamity.com/wp-content/plugins/complianz-gdpr/assets/css/cookieconsent.min.css?ver=4.9.3' type='text/css' media='all' />
+<link rel='stylesheet' id='social-logos-css'  href='https://c0.wp.com/p/jetpack/9.3.1/_inc/social-logos/social-logos.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='https://c0.wp.com/p/jetpack/9.3.1/css/jetpack.css' type='text/css' media='all' />
+<script type='text/javascript' src='https://c0.wp.com/c/5.6/wp-includes/js/jquery/jquery.min.js' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://c0.wp.com/c/5.6/wp-includes/js/jquery/jquery-migrate.min.js' id='jquery-migrate-js'></script>
+<script type='text/javascript' id='jetpack_related-posts-js-extra'>
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/9.3.1/_inc/build/related-posts/related-posts.min.js' id='jetpack_related-posts-js'></script>
+<script type='text/javascript' src='https://codecalamity.com/wp-content/plugins/alx-extensions/js/jquery.sharrre.min.js?ver=1.0.1' id='alx-ext-sharrre-js'></script>
+<script type='text/javascript' src='https://codecalamity.com/wp-content/plugins/responsive-lightbox/assets/swipebox/jquery.swipebox.min.js?ver=2.3.1' id='responsive-lightbox-swipebox-js'></script>
+<script type='text/javascript' src='https://codecalamity.com/wp-content/plugins/responsive-lightbox/assets/infinitescroll/infinite-scroll.pkgd.min.js?ver=5.6' id='responsive-lightbox-infinite-scroll-js'></script>
+<script type='text/javascript' id='responsive-lightbox-js-extra'>
+/* <![CDATA[ */
+var rlArgs = {"script":"swipebox","selector":"lightbox","customEvents":"","activeGalleries":"1","animation":"1","hideCloseButtonOnMobile":"0","removeBarsOnMobile":"0","hideBars":"1","hideBarsDelay":"5000","videoMaxWidth":"1080","useSVG":"1","loopAtEnd":"0","woocommerce_gallery":"0","ajaxurl":"https:\/\/codecalamity.com\/wp-admin\/admin-ajax.php","nonce":"24a873f22d"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://codecalamity.com/wp-content/plugins/responsive-lightbox/js/front.js?ver=2.3.1' id='responsive-lightbox-js'></script>
+<script type='text/javascript' src='https://codecalamity.com/wp-content/themes/minimer/js/slick.min.js?ver=5.6' id='minimer-slick-js'></script>
+<link rel="https://api.w.org/" href="https://codecalamity.com/wp-json/" /><link rel="alternate" type="application/json" href="https://codecalamity.com/wp-json/wp/v2/posts/1041" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://codecalamity.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://codecalamity.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel='shortlink' href='https://wp.me/p8caQX-gN' />
+<link rel="alternate" type="application/json+oembed" href="https://codecalamity.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcodecalamity.com%2Fraspberry-pi-hardware-accelerated-h264-webcam-security-camera%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://codecalamity.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcodecalamity.com%2Fraspberry-pi-hardware-accelerated-h264-webcam-security-camera%2F&amp;format=xml" />
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('http://codecalamity.com/?wordfence_lh=1&amp;hid=7F66043ECDD6A038109F1D6843A336DA');
+</script><style type='text/css'>img#wpstats{display:none}</style><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #020202; }
+</style>
+	<link rel="icon" href="https://i1.wp.com/codecalamity.com/wp-content/uploads/2017/10/cc2.png?fit=32%2C32&amp;ssl=1" sizes="32x32" />
+<link rel="icon" href="https://i1.wp.com/codecalamity.com/wp-content/uploads/2017/10/cc2.png?fit=192%2C192&amp;ssl=1" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://i1.wp.com/codecalamity.com/wp-content/uploads/2017/10/cc2.png?fit=180%2C180&amp;ssl=1" />
+<meta name="msapplication-TileImage" content="https://i1.wp.com/codecalamity.com/wp-content/uploads/2017/10/cc2.png?fit=250%2C250&#038;ssl=1" />
+			<style type="text/css" id="wp-custom-css">
+				.entry-media {
+	display: none;
+}
+.entry h2 span {
+	color: #222; 
+}
+.entry h3 span {
+	color: #222; 
+}
+.entry h4 span {
+	color: #222; 
+}
+.entry code {
+	font-size: 14px;	
+	font-family: "Lucida Console", Monaco, monospace;	
+	padding: 3px;
+	white-space: pre;
+	word-wrap: normal;
+}
+.entry pre {
+	text-indent: -3px;
+	background: #f9f9f9;
+	white-space: pre;
+	word-wrap: normal;
+}
+
+.entry-header {
+	margin-bottom: 0px;
+}
+
+.entry-header, .entry-media, .entry-content, .entry-footer, .pagination, .page-title, .front-widgets {
+	max-width: 850px;
+}
+
+/* .EnlighterJS span {
+	font-size: 13px;
+}
+ */
+div.enlighter {
+	font-size: 16px;
+  font-family: "Lucida Console", Monaco, monospace;	  
+}
+
+figcaption {
+	font-size: 12px;
+	margin: auto;
+}			</style>
+		<style id="kirki-inline-styles"></style></head>
+
+<body data-cmplz=1 class="post-template-default single single-post postid-1041 single-format-standard custom-background col-2cl full-width logged-out">
+
+
+<a class="skip-link screen-reader-text" href="#page">Skip to content</a>
+
+<div id="wrapper">
+	
+	<div id="header-sticky">
+		<header id="header" class="hide-on-scroll-down nav-menu-dropdown-left">
+
+			<div class="group pad">
+				<p class="site-title"><a href="https://codecalamity.com/" rel="home">Code Calamity</a></p>
+																						<p class="site-description">Hodgepodges from a coder&#039;s mind</p>
+								
+									<button class="toggle-search">
+						<svg class="svg-icon" id="svg-search" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"><path d="M38.710696,48.0601792 L43,52.3494831 L41.3494831,54 L37.0601792,49.710696 C35.2632422,51.1481185 32.9839107,52.0076499 30.5038249,52.0076499 C24.7027226,52.0076499 20,47.3049272 20,41.5038249 C20,35.7027226 24.7027226,31 30.5038249,31 C36.3049272,31 41.0076499,35.7027226 41.0076499,41.5038249 C41.0076499,43.9839107 40.1481185,46.2632422 38.710696,48.0601792 Z M36.3875844,47.1716785 C37.8030221,45.7026647 38.6734666,43.7048964 38.6734666,41.5038249 C38.6734666,36.9918565 35.0157934,33.3341833 30.5038249,33.3341833 C25.9918565,33.3341833 22.3341833,36.9918565 22.3341833,41.5038249 C22.3341833,46.0157934 25.9918565,49.6734666 30.5038249,49.6734666 C32.7048964,49.6734666 34.7026647,48.8030221 36.1716785,47.3875844 C36.2023931,47.347638 36.2360451,47.3092237 36.2726343,47.2726343 C36.3092237,47.2360451 36.347638,47.2023931 36.3875844,47.1716785 Z" transform="translate(-20 -31)"></path></svg>
+						<svg class="svg-icon" id="svg-close" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 16 16"><polygon fill="" fill-rule="evenodd" points="6.852 7.649 .399 1.195 1.445 .149 7.899 6.602 14.352 .149 15.399 1.195 8.945 7.649 15.399 14.102 14.352 15.149 7.899 8.695 1.445 15.149 .399 14.102"></polygon></svg>
+					</button>
+					<div class="search-expand">
+						<div class="search-expand-inner">
+							<form method="get" class="searchform themeform" action="https://codecalamity.com/">
+	<div>
+		<input type="text" class="search" name="s" onblur="if(this.value=='')this.value='To search type and hit enter';" onfocus="if(this.value=='To search type and hit enter')this.value='';" value="To search type and hit enter" />
+	</div>
+</form>						</div>
+					</div>
+								
+									<div id="wrap-nav-header" class="wrap-nav">
+								<nav id="nav-header-nav" class="main-navigation nav-menu">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+				<span class="screen-reader-text">Expand Menu</span><div class="menu-toggle-icon"><span></span><span></span><span></span></div>			</button>
+			<div class="menu-top-menu-container"><ul id="nav-header" class="menu"><li id="menu-item-105" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-105"><span class="menu-item-wrapper"><a href="https://codecalamity.com/contributors/">Contributors</a></span></li>
+<li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><span class="menu-item-wrapper"><a href="https://codecalamity.com/about/">About</a></span></li>
+<li id="menu-item-148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><span class="menu-item-wrapper"><a href="https://codecalamity.com/posts/">Posts</a></span></li>
+<li id="menu-item-1184" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1184"><span class="menu-item-wrapper"><a href="https://codecalamity.com/projects/">Projects</a></span></li>
+<li id="menu-item-1195" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1195"><span class="menu-item-wrapper"><a href="https://codecalamity.com/guides/">Guides</a></span></li>
+</ul></div>		</nav>
+							</div>
+								
+								
+			</div>
+			
+		</header><!--/#header-->
+	</div><!--/#header-sticky-->
+	
+		
+	
+
+	
+	<div class="container" id="page">
+		<div class="container-inner">			
+			<div class="main">
+				<div class="main-inner group">
+
+<div class="content">
+	
+			<article id="post-1041" class="post-1041 post type-post status-publish format-standard has-post-thumbnail hentry category-coding category-hardware-build tag-acclerated tag-encoding tag-ffmpeg tag-h264 tag-hardware tag-ip-camera tag-nginx tag-onvif tag-pi tag-raspberry tag-raspberrypi tag-raspbian tag-rtmp tag-secuirty tag-surveillance tag-webcam">	
+			
+			<div class="post-wrapper group">
+				<header class="entry-header group">
+					<h1 class="entry-title">Raspberry Pi Hardware Accelerated RTSP Camera</h1>
+					<div class="entry-meta">
+						<span class="posted-on">Posted on December 5, 2019</span>
+						<span class="byline">by <span class="author"><a href="https://codecalamity.com/author/chris-griffith/" title="Posts by Chris Griffith" rel="author">Chris Griffith</a></span></span>
+						<span class="entry-category"><a href="https://codecalamity.com/category/coding/" rel="category tag">Coding</a> <a href="https://codecalamity.com/category/hardware-build/" rel="category tag">Hardware Build</a></span>
+													<a class="entry-comments" href="index.html#comments"><i class="fas fa-comment"></i><span>13</span></a>
+											</div>
+				</header>
+				<div class="entry-media">
+																		<img width="940" height="529" src="https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_095554.jpg?resize=940%2C529&amp;ssl=1" class="attachment-minimer-large size-minimer-large wp-post-image" alt="" loading="lazy" srcset="https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_095554.jpg?resize=520%2C292&amp;ssl=1 520w, https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_095554.jpg?resize=940%2C529&amp;ssl=1 940w, https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_095554.jpg?zoom=2&amp;resize=940%2C529&amp;ssl=1 1880w" sizes="(max-width: 940px) 100vw, 940px" data-attachment-id="1059" data-permalink="https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/20190719_095554/" data-orig-file="https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_095554.jpg?fit=2440%2C2440&amp;ssl=1" data-orig-size="2440,2440" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;1.5&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;SM-G965U1&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1563530154&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;4.3&quot;,&quot;iso&quot;:&quot;320&quot;,&quot;shutter_speed&quot;:&quot;0.033333333333333&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="20190719_095554" data-image-description="" data-medium-file="https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_095554.jpg?fit=300%2C300&amp;ssl=1" data-large-file="https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_095554.jpg?fit=850%2C850&amp;ssl=1" />															</div>
+				<div class="entry-content">
+					<div class="entry themeform">	
+						<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><figure class="wp-block-image"><img data-attachment-id="1059" data-permalink="https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/20190719_095554/" data-orig-file="https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_095554.jpg?fit=2440%2C2440&amp;ssl=1" data-orig-size="2440,2440" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;1.5&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;SM-G965U1&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1563530154&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;4.3&quot;,&quot;iso&quot;:&quot;320&quot;,&quot;shutter_speed&quot;:&quot;0.033333333333333&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="20190719_095554" data-image-description="" data-medium-file="https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_095554.jpg?fit=300%2C300&amp;ssl=1" data-large-file="https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_095554.jpg?fit=850%2C850&amp;ssl=1" loading="lazy" width="850" height="850" src="https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_095554.jpg?resize=850%2C850&amp;ssl=1" alt="" class="wp-image-1059" srcset="https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_095554.jpg?resize=1024%2C1024&amp;ssl=1 1024w, https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_095554.jpg?resize=150%2C150&amp;ssl=1 150w, https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_095554.jpg?resize=300%2C300&amp;ssl=1 300w, https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_095554.jpg?resize=768%2C768&amp;ssl=1 768w, https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_095554.jpg?resize=200%2C200&amp;ssl=1 200w, https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_095554.jpg?resize=320%2C320&amp;ssl=1 320w, https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_095554.jpg?w=1700&amp;ssl=1 1700w" sizes="(max-width: 850px) 100vw, 850px" data-recalc-dims="1"></figure><p>Raspberry Pi&rsquo;s are wonderful little computers, just sometimes they lack the umph to get stuff done. That may change with the new Raspberry Pi 4, but what to do with all those old ones? Or how about that pile of old webcams? Well this article will help turn all those into a full on security system. (Can also use a raspberry pi camera if you got one!)</p>
+
+
+
+<figure class="wp-block-image"><img data-attachment-id="1054" data-permalink="https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/20190719_074410/" data-orig-file="https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_074410.jpg?fit=2937%2C2616&amp;ssl=1" data-orig-size="2937,2616" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;1.5&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;SM-G965U1&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1563522250&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;4.3&quot;,&quot;iso&quot;:&quot;250&quot;,&quot;shutter_speed&quot;:&quot;0.058823529411765&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="20190719_074410" data-image-description="" data-medium-file="https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_074410.jpg?fit=300%2C267&amp;ssl=1" data-large-file="https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_074410.jpg?fit=850%2C757&amp;ssl=1" loading="lazy" width="2937" height="2616" src="https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_074410.jpg?fit=700%2C623&amp;ssl=1" alt="" class="wp-image-1054" srcset="https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_074410.jpg?w=2937&amp;ssl=1 2937w, https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_074410.jpg?resize=300%2C267&amp;ssl=1 300w, https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_074410.jpg?resize=768%2C684&amp;ssl=1 768w, https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_074410.jpg?resize=1024%2C912&amp;ssl=1 1024w, https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_074410.jpg?w=1700&amp;ssl=1 1700w, https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/20190719_074410.jpg?w=2550&amp;ssl=1 2550w" sizes="(max-width: 850px) 100vw, 850px"></figure><p>Other posts I have read on this subject often only use motion to capture detection events locally. Sometimes they go a bit further and set the Raspberry PI to stream MJPEG as an IP camera. Or set up <a href="https://github.com/ccrisan/motioneyeos">MotionEyeOS </a>and make it into a singular video surveillance system. </p>
+
+
+
+<p>With our IP camera, we are going to take it further and encode the video stream locally. Then we will send it over the network via rtsp. This will save huge amounts of bandwidth! It also does not require the client to re-encode the stream before saving, distributing the work. That way we can also hook it into a larger security suite without draining any of its resources, in this case I will use Blue Iris. </p>
+
+
+
+<p>Now, the first thing I am going to do is discourage you. If you don&rsquo;t already have a Pi and a webcam or pi camera for the cause, don&rsquo;t run out to buy them just for this. It&rsquo;s just not economical. A 1080p WiFi camera that has has ONVIF capabilities can be had for less than $50. So why do this at all? Well because 1.) It&rsquo;s all under your control and no worry about Chinaware, 2.) If you already got the equipment, it&rsquo;s another free security eye, and  3.) It&rsquo;s fun.<br><br>Update: If you&rsquo;re just looking for results, check out my <a href="https://github.com/cdgriffith/pi_streaming_setup/tree/master" target="_blank" rel="noreferrer noopener">helper script</a> that does all the work for you!</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">wget https://raw.githubusercontent.com/cdgriffith/pi_streaming_setup/master/streaming_setup.py
+sudo python3 streaming_setup.py --rtsp</pre>
+
+
+
+<div id="ez-toc-container" class="ez-toc-v2_0_11 counter-hierarchy counter-decimal ez-toc-grey">
+<div class="ez-toc-title-container">
+<p class="ez-toc-title">Table of Contents</p>
+<span class="ez-toc-title-toggle"><a class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"><i class="ez-toc-glyphicon ez-toc-icon-toggle"></i></a></span></div>
+<nav><ul class="ez-toc-list ez-toc-list-level-1"><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-1" href="#standard-raspbian-setup" title="Standard Raspbian setup">Standard Raspbian setup</a></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-2" href="#install-a-node-rtsp-server" title="Install a node rtsp server">Install a node rtsp server</a></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-3" href="#compile-ffmpeg-with-hardware-acceleration" title="Compile FFMPEG with Hardware Acceleration">Compile FFMPEG with Hardware Acceleration</a></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-4" href="#figure-out-your-camera-details" title="Figure out your camera details">Figure out your camera details</a></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-5" href="#real-time-encoding" title="Real Time Encoding">Real Time Encoding</a></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-6" href="#connect-it-to-your-security-center" title="Connect it to your security center">Connect it to your security center</a></li></ul></nav></div>
+<h2 id="standard-raspbian-setup"><span class="ez-toc-section" id="standard-raspbian-setup"></span>Standard Raspbian setup<a class="anchorlink dashicons-before" href="#standard-raspbian-setup"></a><span class="ez-toc-section-end"></span></h2>
+
+
+
+<p>Not going to go into too much detail here. If you haven&rsquo;t already, download Raspbian and get it onto a SD Card. (I used raspbian buster for this tutorial) If you aren&rsquo;t going to connect a display and keyboard to it, make sure to add an empty file named <code>ssh</code> on the <a href="https://www.raspberrypi.org/documentation/remote-access/ssh/">root of the boot (SD Card) drive.</a>  That way you can just SSH to the raspberry pi via command line or PuTTY on Windows.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group=""># Default settings
+host: raspberrypi 
+username: pi
+password: raspberry</pre>
+
+
+
+<p>Remember to run <code>sudo raspi-config</code>, <a href="https://www.raspberrypi.org/documentation/configuration/raspi-config.md">change your password and don&rsquo;t forget to set up wifi</a>, then reboot. Also, good idea to update the system before continuing.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">sudo apt update --fix-missing
+sudo apt upgrade -y 
+sudo reboot </pre>
+
+
+
+<h2 id="install-a-node-rtsp-server"><span class="ez-toc-section" id="install-a-node-rtsp-server"></span>Install a <s>node</s> rtsp server<a class="anchorlink dashicons-before" href="#install-a-node-rtsp-server"></a><span class="ez-toc-section-end"></span></h2>
+
+
+
+<p>To start with, we need a place for ffmpeg to connect to for the rtsp connection. Most security systems expect to connect to a rstp server, instead of listening as a server themselves, so we need a middleman. <br><br>There are a lot of rstp server options out there, I wanted to go with a lightweight one we can just run on the pi itself that is easy to install and run easily. This is what I run at my own house, so don&rsquo;t think I&rsquo;m skimping out for this post 😉 </p>
+
+
+
+<p><strong>UPDATE</strong>: I have stopped using the below server, and instead use <a href="https://github.com/aler9/rtsp-simple-server">rtsp-simple-server</a>, which has ARM builds per-compiled. This is what is used with the <a href="https://github.com/cdgriffith/pi_streaming_setup/tree/master" target="_blank" rel="noreferrer noopener">helper script</a>. (Not because the Node based one gave me issues, just this other one is much more lightweight and easy to install.) </p>
+
+
+
+<p>First of, we need to install Node JS. The easiest way I have found is to use the pre-created scripts to add the proper package links to the apt system for us. </p>
+
+
+
+<p>If you are on an arm6 based system, such as the pi zero, you will need to do just a <a href="https://www.thepolyglotdeveloper.com/2018/03/install-nodejs-raspberry-pi-zero-w-nodesource/">little extra work to install Node</a>. For arm7 systems, like anything Raspberry Pi 3 or newer, we will use Node 12. Find out your arm version with <code>uname -a</code> command and seeing if the string &ldquo;arm6&rdquo; or &ldquo;arm7&rdquo; appears. </p>
+
+
+
+<p>Now, lets install Node JS and other needed libraries, such as <code>git</code> and <code>coffeescript</code>. If you want to view the script itself before running it, it is available to view <a href="https://deb.nodesource.com/setup_10.x">here</a>.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+
+sudo apt-get install -y nodejs git
+sudo npm install -g coffeescript</pre>
+
+
+
+<p>Once that is complete, we want to download the node rtsp server code and install all it&rsquo;s dependencies. Note, I am assuming you are doing this in the root of your home folder, which will later use as the base for the directory for the service. </p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">cd ~ 
+git clone https://github.com/iizukanao/node-rtsp-rtmp-server.git --depth 1
+cd node-rtsp-rtmp-server
+npm install -d</pre>
+
+
+
+<p>Now you should be good to go, you can test it out by running: </p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">sudo coffee server.coffee</pre>
+
+
+
+<p>It takes about 60 seconds or more to start up, so give it minute before you will see any text. Example output is below. </p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">2019-12-16 14:24:18.465 attachRecordedDir: dir=file app=file
+(node:6812) [DEP0005] DeprecationWarning: Buffer() is deprecated ...
+2019-12-16 14:24:18.683 [rtmp] server started on port 1935
+2019-12-16 14:24:18.691 [rtsp/http/rtmpt] server started on port 80</pre>
+
+
+
+<p>Simple make sure it starts up and then you can stop it by hitting <code>Ctrl+c</code> At this point you can also go into the <code>server.coffee</code> file and edit it to your hearts content, however I do keep it standard myself. </p>
+
+
+
+<h3 id="create-rtsp-server-service">Create  rtsp server service<a class="anchorlink dashicons-before" href="#create-rtsp-server-service"></a></h3>
+
+
+
+<p>You probably want this to always start this on boot, so lets add it as a systemd service. Copy and paste the following code into <code>/etc/systemd/system/rtsp_server.service</code>.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group=""># /etc/systemd/system/rtsp_server.service
+
+[Unit]
+Description=rtsp_server
+After=network.target rc-local.service
+
+[Service]
+Restart=always
+WorkingDirectory=/home/pi/node-rtsp-rtmp-server
+ExecStart=coffee server.coffee
+
+[Install]
+WantedBy=multi-user.target</pre>
+
+
+
+<p>Now we can start it up via the service, and enable it to start on boot.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">sudo systemctl start rtsp_server
+# Can make sure it works with sudo systemctl status rtsp_server
+sudo systemctl enable rtsp_server</pre>
+
+
+
+<h2 id="compile-ffmpeg-with-hardware-acceleration"><span class="ez-toc-section" id="compile-ffmpeg-with-hardware-acceleration"></span>Compile FFMPEG with Hardware Acceleration<a class="anchorlink dashicons-before" href="#compile-ffmpeg-with-hardware-acceleration"></a><span class="ez-toc-section-end"></span></h2>
+
+
+
+<p><em>If you are just using the raspberry pi camera, or another one with h264 or h265 built in support, you can use the distribution version of ffmpeg instead. </em></p>
+
+
+
+<p><strong>UPDATE</strong>: The built in FFmpeg now had hardware acceleration built in, so you can skip the compilation, or use my <a href="https://github.com/cdgriffith/pi_streaming_setup/tree/master" target="_blank" rel="noreferrer noopener">helper script</a> to compile it for you with a lot of extras. </p>
+
+
+
+<p>This is going to take a while to make. I suggest reading a good blog post or watching some Red vs Blue while it builds. This guide is just small modifications from <a href="https://github.com/legotheboss/YouTube-files/wiki/(RPi)-Compile-FFmpeg-with-the-OpenMAX-H.264-GPU-acceleration">another one.</a> We are also adding <code>libfreetype</code> font package so we can add text (like a datetime) to the video stream, as well as the default <code>libx264</code> so that we can use it with the Pi Camera if you have one.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">sudo apt-get install libomxil-bellagio-dev libfreetype6-dev libmp3lame-dev checkinstall libx264-dev fonts-freefont-ttf libasound2-dev -y
+cd ~
+git clone https://github.com/FFmpeg/FFmpeg.git --depth 1
+cd FFmpeg
+sudo ./configure --arch=armel --target-os=linux --enable-gpl --enable-omx --enable-omx-rpi --enable-nonfree --enable-libfreetype --enable-libx264 --enable-libmp3lame --enable-mmal --enable-indev=alsa --enable-outdev=alsa
+
+# For old hardware / Pi zero remove the `-j4` 
+sudo make -j4</pre>
+
+
+
+<p>When that is finally done, run the steps below that will install it. We take the additional precaution of turning it into a standard system package and hold it so we don&rsquo;t overwrite our ffmpeg version.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">sudo checkinstall --pkgname=ffmpeg -y 
+sudo apt-mark hold ffmpeg 
+echo "ffmpeg hold" | sudo dpkg --set-selections</pre>
+
+
+
+<h2 id="figure-out-your-camera-details"><span class="ez-toc-section" id="figure-out-your-camera-details"></span>Figure out your camera details<a class="anchorlink dashicons-before" href="#figure-out-your-camera-details"></a><span class="ez-toc-section-end"></span></h2>
+
+
+
+<p>If you haven&rsquo;t already, plug the webcam into the raspberry pi. Then we are going to use video4linux2 to discover what it&rsquo;s capable of. </p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">v4l2-ctl --list-devices</pre>
+
+
+
+<p>Mine lists my webcam and two paths it&rsquo;s located at. Sometimes a camera will have multiple devices for different types of formats it supports, so it&rsquo;s a good idea to check each one out. </p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">Microsoft&reg; LifeCam Cinema(TM): (usb-3f980000.usb-1.2):
+        /dev/video0
+        /dev/video1</pre>
+
+
+
+<p>Now we need to see what resolutions and FPS it can handle. Be warned <code>MJPEG</code> streams are much more taxing to encode them some of their counterparts. In this example we are going to specifically try to find <code>YUYV 4:2:2</code> streams, as they are a lot easier to encode. (Unless you see h264, then use that!)</p>
+
+
+
+<p><em>In my small testing group, <code>MJPEG</code> streams averaged only 70% of the FPS of the <code>YUYV</code>, while running the CPU up to 60%. Comparatively, <code>YUYV</code> encoding only took 20% of the CPU usage on average.</em></p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">v4l2-ctl -d /dev/video0 --list-formats-ext</pre>
+
+
+
+<p>This pumps out a lot of info. Basically you want to find the subset under <code>YUYV</code> and figure out which resolution and fps you want. Here is an example of some of the ones my webcam supports.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">ioctl: VIDIOC_ENUM_FMT
+        Type: Video Capture
+
+        [0]: 'YUYV' (YUYV 4:2:2)
+                Size: Discrete 640x480
+                        Interval: Discrete 0.033s (30.000 fps)
+                        Interval: Discrete 0.050s (20.000 fps)
+                        Interval: Discrete 0.067s (15.000 fps)
+                        Interval: Discrete 0.100s (10.000 fps)
+                        Interval: Discrete 0.133s (7.500 fps)
+                Size: Discrete 1280x720
+                        Interval: Discrete 0.100s (10.000 fps)
+                        Interval: Discrete 0.133s (7.500 fps)
+                Size: Discrete 960x544
+                        Interval: Discrete 0.067s (15.000 fps)
+                        Interval: Discrete 0.100s (10.000 fps)
+                        Interval: Discrete 0.133s (7.500 fps)</pre>
+
+
+
+<p>I am going to be using the max resolution of 1280&times;720 and the highest fps of 10. Now if it looks perfect as is, you can skip to the next section. Though if you need to tweak the brightness, contrast or other camera settings, read on.</p>
+
+
+
+<h3 id="image-tweaks">Image tweaks<a class="anchorlink dashicons-before" href="#image-tweaks"></a></h3>
+
+
+
+<p>Let&rsquo;s figure out what settings we can play with on the camera.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">v4l2-ctl -d /dev/video0 --all</pre>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">brightness (int)                : min=30 max=255 step=1 default=-8193 value=135
+contrast (int)                  : min=0 max=10 step=1 default=57343 value=5
+saturation (int)                : min=0 max=200 step=1 default=57343 value=100
+power_line_frequency (menu)     : min=0 max=2 default=2 value=2
+sharpness (int)                 : min=0 max=50 step=1 default=57343 value=27
+backlight_compensation (int)    : min=0 max=10 step=1 default=57343 value=0
+exposure_auto (menu)            : min=0 max=3 default=0 value=3
+exposure_absolute (int)         : min=5 max=20000 step=1 default=156 value=156
+pan_absolute (int)              : min=-201600 max=201600 step=3600 default=0 
+tilt_absolute (int)             : min=-201600 max=201600 step=3600 default=0 
+focus_absolute (int)            : min=0 max=40 step=1 default=57343 value=12
+focus_auto (bool)               : default=0 value=0
+zoom_absolute (int)             : min=0 max=10 step=1 default=57343 value=0
+</pre>
+
+
+
+<p>Plenty of options, excellent. Now, if you don&rsquo;t have a method to look at the camera display just yet, come back to this part after you have the live stream going. You can change these settings while it is going thankfully.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">v4l2-ctl -d /dev/video0 --set-ctrl &lt;setting&gt;=&lt;value&gt;</pre>
+
+
+
+<p>The main problems I had with my camera was that it was a little dark and liked to auto-focus every 5~10 seconds. So I added the following lines of code to my <code>rc.local</code> file, but there are <a href="https://www.dexterindustries.com/howto/run-a-program-on-your-raspberry-pi-at-startup/">various way to run commands on startup</a>.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">#  I added these lines right before the exit 0
+
+# dirty hack to make sure v4l2 has time to initialize the cameras
+sleep 10 
+
+v4l2-ctl -d /dev/video0 --set-ctrl focus_auto=0
+v4l2-ctl -d /dev/video0 --set-ctrl focus_absolute=12
+v4l2-ctl -d /dev/video0 --set-ctrl brightness=135</pre>
+
+
+
+<p>Now onto the fun stuff!</p>
+
+
+
+<h2 id="real-time-encoding"><span class="ez-toc-section" id="real-time-encoding"></span>Real Time Encoding<a class="anchorlink dashicons-before" href="#real-time-encoding"></a><span class="ez-toc-section-end"></span></h2>
+
+
+
+<p>Now we are going to use hardware accelerated ffmpeg library <code>h264_omx</code> to encode the webcam stream. That is, unless you happen to already be using a camera that supports <code>h264</code> already. Like the built-in raspberry pi camera. If you are lucky enough to have one, you can just copy the output directly to the rtsp stream.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group=""># Only for cameras that support h264 natively!
+ffmpeg -input_format h264 -f video4linux2 -video_size 1920x1080 -framerate 30 -i /dev/video0 -c:v copy -an -f rtsp rtsp://localhost:80/live/stream</pre>
+
+
+
+<p><em>If at any point you receive the error <code><code>ioctl(VIDIOC_STREAMON) failure : 1, Operation not permitted</code></code>, go into <code>raspi-config</code> and up the video memory (memory split) to <code>256</code> and reboot. </em></p>
+
+
+
+<p>In the code below, make sure to change the <code>-s 1280x720</code> to your video resolution (can also use <code>-video_size</code> instead of <code>-s</code>) and <strong>both </strong><code>-r 10</code> occurrences to your frame rate (can also use <code>-framerate</code>).</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">ffmpeg -input_format yuyv422 -f video4linux2 -s 1280x720 -r 10 -i /dev/video0 -c:v h264_omx -r 10 -b:v 2M -an -f rtsp rtsp://localhost:80/live/stream</pre>
+
+
+
+<p>So lets brake this down. The first part is telling ffmpeg what to expect from your device, <code>-i /dev/video0</code>. Which means all those arguments must go before the declaration of the device itself. </p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">-input_format yuyv422 -f video4linux2 -s &lt;your resolution&gt; -r &lt;your framerate&gt;</pre>
+
+
+
+<p>We are making clear that we only want the <code>yuyv</code> format as it is best available for my two cameras, yours may be different. Then specifying what resolution and fps we want it at. Be warned, that if you set one of them wrong, it may seem like it works (still encodes) but will give an error message to look out for:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">[video4linux2] The V4L2 driver changed the video from 1280x8000 to 1280x800
+[video4linux2] The driver changed the time per frame from 1/30 to 1/10</pre>
+
+
+
+<p>The next section is our conversion parameters.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">-c:v h264_omx -r &lt;your framerate&gt; -b:v 2M</pre>
+
+
+
+<p>Here <code>-c:v h264_omx</code> we are saying the video codex to use h264, with the special omx hardware encoder. We are then telling it what the frame rate will be out as well, <code>-r 10</code>, and <a href="https://trac.ffmpeg.org/wiki/Limiting the output bitrate">specifying the quality</a> with <code>-b:v 2M</code> (aka bitrate) which determines how much bandwidth will be used when transmitting the video.  Play around with different settings like <code>-b:v 500k</code> to see where you want it to be at. You will need a higher bitrate for higher resolution and framerate, and a lot less for lower resolution. </p>
+
+
+
+<p>After that, we are telling it to disable audio with <code>-an</code> for the moment. If you do want audio, there is an optional section below going over how to enable that. </p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">-f rtsp rtsp://localhost:80/live/stream</pre>
+
+
+
+<p>Finally we are telling it where to send the video, and to send it in the expected <code>rtsp</code> format (rstp is the video wrapper format, the video itself is still mp4). Notice that with the rstp server we can have as many camera with their own sub url, so instead of <code>live/stream</code> at the end could be <code>live/camera1</code> and <code>live/camera2</code>.</p>
+
+
+
+<h3 id="adding-audio">Adding audio<a class="anchorlink dashicons-before" href="#adding-audio"></a></h3>
+
+
+
+<p><em><strong>Optional</strong>, not included in my final service script</em></p>
+
+
+
+<p>As most webcams have built-in microphones, it makes it easy to add it to our stream if you want. First we need to identify our audio device. </p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">arecord -l</pre>
+
+
+
+<p>You should get a list of possible devices back, in this case only my webcam is showing up as expected. If you have more than one, make sure you check out the ffmpeg article on &ldquo;<a href="https://trac.ffmpeg.org/wiki/Capture/ALSA#Survivingthereboot">surviving the reboot</a>&rdquo; so they don&rsquo;t get randomly re-ordered.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">**** List of CAPTURE Hardware Devices ****
+card 1: CinemaTM [Microsoft&reg; LifeCam Cinema(TM)], device 0: USB Audio [USB Audio]
+  Subdevices: 0/1
+  Subdevice #0: subdevice #0</pre>
+
+
+
+<p>Notice it says card 1 at the very being of the webcam, and specifically device 0, that is the ID we are going to use to reference it with ffmpeg. I&rsquo;m going to show the full command first like before and break it down again.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">ffmpeg -input_format yuyv422 -f video4linux2 -s 1280x720 -r 10 -i /dev/video0 -f alsa -ac 1 -ar 44100 -i hw:1,0 -map 0:0 -map 1:0 -c:a aac -b:a 96k -c:v h264_omx -r 10 -b:v 2M -f rtsp -rtsp_transport tcp rtsp://127.0.0.1:80/live/webcam</pre>
+
+
+
+<p>So to start with, we are adding a new input of type <code>ALSA</code> ( Advanced Linux Sound Architecture) <code>-f alsa -i hw:1,0</code>. Because it&rsquo;s a webcam, which generally only has a single channel of audio (aka mono), it needs <code>-ac 1</code> passed to it as it by defaults tries to interpret it as stereo (<code>-ac 2</code>). It you get the error <code>cannot set channel count to 1 (Invalid argument)</code> that means it probably actually does have stereo, so you can remove it or set it to <code>-ac 2</code>.</p>
+
+
+
+<p>Finally, I am setting a custom sampling rate of 44.1kHz, <code>-ar 44100</code>, the same used on CDs. All that giving us the new input of <code>-f alsa -ac 1 -ar 44100 -i hw:1,0</code> .</p>
+
+
+
+<p>Next we do a custom mapping to make sure our output streams are set up as we expect. Now ffmpeg is usually pretty good about doing this by default if we have a single input with video, and a single input with audio, this is really just to make sure that nobody out there has weird issues. <code>-map 0:0 -map 1:0</code> is saying that we want the first track from the first source <code>0:0</code> and the first track from the second source <code>1:0</code>.  </p>
+
+
+
+<p>Finally our encoding for the audio is set up with <code>-c:a aac -b:a 96k</code> which is saying to use the <code>AAC</code> audio type, with a bitrate of <code>96k</code>. Now this could be a lot higher, as the theoretical bitrate of this source is now <code>352k</code> (sample rate X bit depth X channels), but I can&rsquo;t tell the difference past <code>96k</code> with my mic is why I stuck with that. </p>
+
+
+
+<p>One gotcha with sound, is that if the ffmpeg encoding can&rsquo;t keep up with the source, aka the <code>fps</code> output isn&rsquo;t the same as the input, the audio will probably skip weirdly, so you may need to step it down to a lower framerate or resolution if it can&rsquo;t keep up.</p>
+
+
+
+<h3 id="adding-timestamp">Adding timestamp<a class="anchorlink dashicons-before" href="#adding-timestamp"></a></h3>
+
+
+
+<p><em><strong>Optional</strong>, but is included in my service script</em></p>
+
+
+
+<p>This is optional, but I find it handy to directly add the current timestamp to the stream. I also like to have the timestamp in a box so I can always read it in case the background is close to the same color as the font. Here is what we are going to add into the middle of our ffmpeg command. </p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">-vf "drawtext=fontfile=/usr/share/fonts/truetype/freefont/FreeSerif.ttf:text='%{localtime}':x=8:y=8:fontcolor=white: box=1: boxcolor=black"</pre>
+
+
+
+<p>It&rsquo;s a lot text, but pretty self explanatory. We specify which font file to use <code>drawtext=fontfile=/usr/share/fonts/truetype/freefont/FreeSerif.ttf</code>, that the text will be the local time (make sure you have set your locale right!). Next we are going to start the box 8 pixels in and 8 pixels down from the top left corner. Then we set the font&rsquo;s color, and that it will have a box around it with a different color. </p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">ffmpeg -input_format yuyv422 -f video4linux2 -s 1280x720 -r 10 -i /dev/video0 -c:v h264_omx -r 10 -b:v 2M -vf "drawtext=fontfile=/usr/share/fonts/truetype/freefont/FreeSerif.ttf:text='%{localtime}':x=8:y=8:fontcolor=white: box=1: boxcolor=black" -an -f rtsp rtsp://localhost:80/live/stream</pre>
+
+
+
+<h3 id="making-it-systemd-service-ready">Making it systemd service ready<a class="anchorlink dashicons-before" href="#making-it-systemd-service-ready"></a></h3>
+
+
+
+<p>When running ffmpeg as a service, you probably don&rsquo;t want to pollute the logs with standard output info. I also had a random issue with it trying to read info from <code>stdin</code> when a service, so I also added the <code>-nostdin</code> for my own sake. You can add these at the start of the command. </p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">-nostdin -hide_banner -loglevel error</pre>
+
+
+
+<p>You can hide even more if you want to up it to <code>-loglevel panic</code>, but I personally want to see any errors that come up just in case. </p>
+
+
+
+<p>So now our full command is pretty hefty.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">ffmpeg -nostdin -hide_banner -loglevel error -input_format yuyv422 -f video4linux2 -s 1280x720 -r 10 -i /dev/video0 -c:v h264_omx -r 10 -b:v 2M -vf "drawtext=fontfile=/usr/share/fonts/truetype/freefont/FreeSerif.ttf:text='%{localtime}:x=8:y=8:fontcolor=white: box=1: boxcolor=black" -an -f rtsp rtsp://localhost:80/live/stream</pre>
+
+
+
+<p>Our new full command is a lot in one line, but it gets the job done!</p>
+
+
+
+<h3 id="viewing-the-stream">Viewing the stream<a class="anchorlink dashicons-before" href="#viewing-the-stream"></a></h3>
+
+
+
+<p>When you have the stream running, you can pull up VLC or other network enabled media players and point to <code>rtsp://raspberrypi:80/live/stream</code> (if you changed your hostname, will have to do it based off ip).</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="1305" data-permalink="https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/vlc-setup/" data-orig-file="https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/12/VLC-setup.png?fit=1282%2C826&amp;ssl=1" data-orig-size="1282,826" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="VLC-setup" data-image-description="" data-medium-file="https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/12/VLC-setup.png?fit=300%2C193&amp;ssl=1" data-large-file="https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/12/VLC-setup.png?fit=850%2C548&amp;ssl=1" loading="lazy" width="1282" height="826" src="https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/12/VLC-setup.png?fit=740%2C477&amp;ssl=1" alt="" class="wp-image-1305" srcset="https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/12/VLC-setup.png?w=1282&amp;ssl=1 1282w, https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/12/VLC-setup.png?resize=300%2C193&amp;ssl=1 300w, https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/12/VLC-setup.png?resize=1024%2C660&amp;ssl=1 1024w, https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/12/VLC-setup.png?resize=768%2C495&amp;ssl=1 768w" sizes="(max-width: 850px) 100vw, 850px"></figure><p>When you have the command massaged exactly how you want it, we are going to create a systemd file with it, just like we did for the rstp server. In this case we will save it to the file <code>/etc/systemd/system/encode_webcam.service</code> and we will also add the argument <code>-nostdin</code> right after <code>ffmpeg</code> safety.   <code>sudo vi /etc/systemd/system/encode_webcam.service</code> </p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group=""># /etc/systemd/system/encode_webcam.service
+
+[Unit]
+Description=encode_webcam
+After=network.target rtsp_server.service rc-local.service
+
+[Service]
+Restart=always
+RestartSec=20s
+User=pi
+ExecStart=ffmpeg -nostdin -hide_banner -loglevel error -input_format yuyv422 
+ -f video4linux2 -s 1280x720 -r 10 -i /dev/video0 -c:v h264_omx -r 10 -b:v 2M 
+ -vf "drawtext=fontfile=/usr/share/fonts/truetype/freefont/FreeSerif.ttf 
+ :text='%{localtime}:x=8:y=8:fontcolor=white: box=1: boxcolor=black" -an 
+ -f rtsp rtsp://localhost:80/live/stream
+
+
+[Install]
+WantedBy=multi-user.target</pre>
+
+
+
+<p>Now start it up, and enable it to run on boot.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">sudo systemctl start encode_webcam
+sudo systemctl enable encode_webcam</pre>
+
+
+
+<h2 id="connect-it-to-your-security-center"><span class="ez-toc-section" id="connect-it-to-your-security-center"></span>Connect it to your security center<a class="anchorlink dashicons-before" href="#connect-it-to-your-security-center"></a><span class="ez-toc-section-end"></span></h2>
+
+
+
+<p>I have looked at a few different security suits for my personal needs. They included  <a href="https://www.ispyconnect.com/download.aspx#">iSpy </a>(Windows) and <a href="https://www.zoneminder.com/downloads/">ZoneMinder</a> (Linux) but I finally decided upon the industry standard <a href="https://blueirissoftware.com/">Blue Iris</a> (Windows). I like it because of feature set: mobile app, motion detection, mobile alerts, NAS and Cloud storage, etc&hellip; Blue Iris also has a 15 day evaluation period to try before you buy. You don&rsquo;t even need to register or provide credit info!</p>
+
+
+
+<p>For our needs, the best part about Blue Iris is that it supports direct to disk recording. That way we don&rsquo;t have to re-encode the stream! So lets get rolling, on the top left, select the first menu and hit &ldquo;Add new camera&rdquo;.</p>
+
+
+
+<figure class="wp-block-image"><img data-attachment-id="1050" data-permalink="https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/iris-add-camera/" data-orig-file="https://i0.wp.com/codecalamity.com/wp-content/uploads/2019/07/iris-add-camera.png?fit=372%2C116&amp;ssl=1" data-orig-size="372,116" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="iris-add-camera" data-image-description="" data-medium-file="https://i0.wp.com/codecalamity.com/wp-content/uploads/2019/07/iris-add-camera.png?fit=300%2C94&amp;ssl=1" data-large-file="https://i0.wp.com/codecalamity.com/wp-content/uploads/2019/07/iris-add-camera.png?fit=372%2C116&amp;ssl=1" loading="lazy" width="372" height="116" src="https://i0.wp.com/codecalamity.com/wp-content/uploads/2019/07/iris-add-camera.png?resize=372%2C116&amp;ssl=1" alt="add new camera" class="wp-image-1050" srcset="https://i0.wp.com/codecalamity.com/wp-content/uploads/2019/07/iris-add-camera.png?w=372&amp;ssl=1 372w, https://i0.wp.com/codecalamity.com/wp-content/uploads/2019/07/iris-add-camera.png?resize=300%2C94&amp;ssl=1 300w" sizes="(max-width: 372px) 100vw, 372px" data-recalc-dims="1"></figure><p>It will then have a popup to name and configure the camera, here make sure to select the last option &ldquo;Direct to disk recording&rdquo;.</p>
+
+
+
+<figure class="wp-block-image"><img data-attachment-id="1051" data-permalink="https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/iris-direct/" data-orig-file="https://i2.wp.com/codecalamity.com/wp-content/uploads/2019/07/iris-direct.png?fit=565%2C567&amp;ssl=1" data-orig-size="565,567" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="iris-direct" data-image-description="" data-medium-file="https://i2.wp.com/codecalamity.com/wp-content/uploads/2019/07/iris-direct.png?fit=300%2C300&amp;ssl=1" data-large-file="https://i2.wp.com/codecalamity.com/wp-content/uploads/2019/07/iris-direct.png?fit=565%2C567&amp;ssl=1" loading="lazy" width="565" height="567" src="https://i2.wp.com/codecalamity.com/wp-content/uploads/2019/07/iris-direct.png?resize=565%2C567&amp;ssl=1" alt="" class="wp-image-1051" srcset="https://i2.wp.com/codecalamity.com/wp-content/uploads/2019/07/iris-direct.png?w=565&amp;ssl=1 565w, https://i2.wp.com/codecalamity.com/wp-content/uploads/2019/07/iris-direct.png?resize=150%2C150&amp;ssl=1 150w, https://i2.wp.com/codecalamity.com/wp-content/uploads/2019/07/iris-direct.png?resize=300%2C300&amp;ssl=1 300w" sizes="(max-width: 565px) 100vw, 565px" data-recalc-dims="1"></figure><p>Next it will need the network info for the camera, put in the same info as you  did for VLC. Blue Iris should auto parse it into the fields it wants, and hit OK.</p>
+
+
+
+<figure class="wp-block-image"><img data-attachment-id="1052" data-permalink="https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/iris-network-camera/" data-orig-file="https://i0.wp.com/codecalamity.com/wp-content/uploads/2019/07/iris-network-camera-e1563538112177.png?fit=858%2C597&amp;ssl=1" data-orig-size="858,597" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="iris-network-camera" data-image-description="" data-medium-file="https://i0.wp.com/codecalamity.com/wp-content/uploads/2019/07/iris-network-camera-e1563538112177.png?fit=300%2C209&amp;ssl=1" data-large-file="https://i0.wp.com/codecalamity.com/wp-content/uploads/2019/07/iris-network-camera-e1563538112177.png?fit=850%2C591&amp;ssl=1" src="https://i1.wp.com/codecalamity.com/wp-content/uploads/2019/07/iris-network-camera.png?w=850&amp;ssl=1" alt="" class="wp-image-1052" data-recalc-dims="1"></figure><p>Volia! Your raspberry pi is now added to your security suite! </p>
+
+
+
+<figure class="wp-block-image"><img data-attachment-id="1112" data-permalink="https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/blue-iris-3-cameras/" data-orig-file="https://i2.wp.com/codecalamity.com/wp-content/uploads/2019/08/blue-iris-3-cameras.png?fit=1920%2C1035&amp;ssl=1" data-orig-size="1920,1035" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="blue iris 3 cameras" data-image-description="" data-medium-file="https://i2.wp.com/codecalamity.com/wp-content/uploads/2019/08/blue-iris-3-cameras.png?fit=300%2C162&amp;ssl=1" data-large-file="https://i2.wp.com/codecalamity.com/wp-content/uploads/2019/08/blue-iris-3-cameras.png?fit=850%2C458&amp;ssl=1" loading="lazy" width="850" height="458" src="https://i2.wp.com/codecalamity.com/wp-content/uploads/2019/08/blue-iris-3-cameras.png?resize=850%2C458&amp;ssl=1" alt="" class="wp-image-1112" srcset="https://i2.wp.com/codecalamity.com/wp-content/uploads/2019/08/blue-iris-3-cameras.png?resize=1024%2C552&amp;ssl=1 1024w, https://i2.wp.com/codecalamity.com/wp-content/uploads/2019/08/blue-iris-3-cameras.png?resize=300%2C162&amp;ssl=1 300w, https://i2.wp.com/codecalamity.com/wp-content/uploads/2019/08/blue-iris-3-cameras.png?resize=768%2C414&amp;ssl=1 768w, https://i2.wp.com/codecalamity.com/wp-content/uploads/2019/08/blue-iris-3-cameras.png?w=1920&amp;ssl=1 1920w, https://i2.wp.com/codecalamity.com/wp-content/uploads/2019/08/blue-iris-3-cameras.png?w=1700&amp;ssl=1 1700w" sizes="(max-width: 850px) 100vw, 850px" data-recalc-dims="1"></figure><p>Now you can have fun setting up recording schedules, motion detection recording, mobile alerts, and more!</p></body>
+<!-- Mirrored from codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Jan 2021 17:51:44 GMT -->
+</html>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-reddit"><a rel="nofollow noopener noreferrer" data-shared="" class="share-reddit sd-button share-icon" href="https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/?share=reddit" target="_blank" title="Click to share on Reddit"><span>Reddit</span></a></li><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-1041" class="share-twitter sd-button share-icon" href="https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/?share=twitter" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-1041" class="share-facebook sd-button share-icon" href="https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/?share=facebook" target="_blank" title="Click to share on Facebook"><span>Facebook</span></a></li><li class="share-email"><a rel="nofollow noopener noreferrer" data-shared="" class="share-email sd-button share-icon" href="https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/?share=email" target="_blank" title="Click to email this to a friend"><span>Email</span></a></li><li class="share-end"></li></ul></div></div></div>
+<div id='jp-relatedposts' class='jp-relatedposts' >
+	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+</div>												<div class="clear"></div>				
+					</div><!--/.entry-->
+				</div>
+				<div class="entry-footer group">
+					
+					<p class="post-tags"><span>Tags:</span> <a href="https://codecalamity.com/tag/acclerated/" rel="tag">acclerated</a><a href="https://codecalamity.com/tag/encoding/" rel="tag">encoding</a><a href="https://codecalamity.com/tag/ffmpeg/" rel="tag">ffmpeg</a><a href="https://codecalamity.com/tag/h264/" rel="tag">h264</a><a href="https://codecalamity.com/tag/hardware/" rel="tag">hardware</a><a href="https://codecalamity.com/tag/ip-camera/" rel="tag">ip camera</a><a href="https://codecalamity.com/tag/nginx/" rel="tag">nginx</a><a href="https://codecalamity.com/tag/onvif/" rel="tag">onvif</a><a href="https://codecalamity.com/tag/pi/" rel="tag">pi</a><a href="https://codecalamity.com/tag/raspberry/" rel="tag">raspberry</a><a href="https://codecalamity.com/tag/raspberrypi/" rel="tag">raspberrypi</a><a href="https://codecalamity.com/tag/raspbian/" rel="tag">raspbian</a><a href="https://codecalamity.com/tag/rtmp/" rel="tag">rtmp</a><a href="https://codecalamity.com/tag/secuirty/" rel="tag">secuirty</a><a href="https://codecalamity.com/tag/surveillance/" rel="tag">surveillance</a><a href="https://codecalamity.com/tag/webcam/" rel="tag">webcam</a></p>					
+					<div class="clear"></div>
+					
+										
+					<div class="entry-bar">
+						<div class="entry-bar-left">
+							
+	<div class="sharrre-container sharrre-header group">
+		<span>Share</span>
+		<div id="twitter" data-url="https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/" data-text="Raspberry Pi Hardware Accelerated RTSP Camera" data-title="Tweet"></div>
+		<div id="facebook" data-url="https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/" data-text="Raspberry Pi Hardware Accelerated RTSP Camera" data-title="Like"></div>
+		<div id="pinterest" data-url="https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/" data-text="Raspberry Pi Hardware Accelerated RTSP Camera" data-title="Pin It"></div>
+		<div id="linkedin" data-url="https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/" data-text="Raspberry Pi Hardware Accelerated RTSP Camera" data-title="Share on LinkedIn"></div>
+	</div><!--/.sharrre-container-->
+
+	<script type="text/javascript">
+		// Sharrre
+		jQuery(document).ready(function(){
+			jQuery('#twitter').sharrre({
+				share: {
+					twitter: true
+				},
+				template: '<a class="box group" href="#"><div class="count" href="#"><i class="fas fa-plus"></i></div><div class="share"><i class="fab fa-twitter"></i></div></a>',
+				enableHover: false,
+				enableTracking: true,
+				buttons: { twitter: {via: ''}},
+				click: function(api, options){
+					api.simulateClick();
+					api.openPopup('twitter');
+				}
+			});
+			jQuery('#facebook').sharrre({
+				share: {
+					facebook: true
+				},
+				template: '<a class="box group" href="#"><div class="count" href="#"><i class="fas fa-plus"></i></div><div class="share"><i class="fab fa-facebook-square"></i></div></a>',
+				enableHover: false,
+				enableTracking: true,
+				buttons:{layout: 'box_count'},
+				click: function(api, options){
+					api.simulateClick();
+					api.openPopup('facebook');
+				}
+			});
+			jQuery('#pinterest').sharrre({
+				share: {
+					pinterest: true
+				},
+				template: '<a class="box group" href="#"><div class="count" href="#"><i class="fas fa-plus"></i></div><div class="share"><i class="fab fa-pinterest"></i></div></a>',
+				enableHover: false,
+				enableTracking: true,
+				buttons: {
+				pinterest: {
+					description: 'Raspberry Pi Hardware Accelerated RTSP Camera',media: 'https://codecalamity.com/wp-content/uploads/2019/07/20190719_095554.jpg'					}
+				},
+				click: function(api, options){
+					api.simulateClick();
+					api.openPopup('pinterest');
+				}
+			});
+			jQuery('#linkedin').sharrre({
+				share: {
+					linkedin: true
+				},
+				template: '<a class="box group" href="#"><div class="count" href="#"><i class="fas fa-plus"></i></div><div class="share"><i class="fab fa-linkedin"></i></div></a>',
+				enableHover: false,
+				enableTracking: true,
+				buttons: {
+				linkedin: {
+					description: 'Raspberry Pi Hardware Accelerated RTSP Camera',media: 'https://codecalamity.com/wp-content/uploads/2019/07/20190719_095554.jpg'					}
+				},
+				click: function(api, options){
+					api.simulateClick();
+					api.openPopup('linkedin');
+				}
+			});
+
+		});
+	</script>
+							</div>
+						<div class="entry-bar-right">
+								<ul class="post-nav group">
+		<li class="next"><a href="https://codecalamity.com/how-not-to-call-robinhoods-secret-api-with-python/" rel="next"><i class="fas fa-chevron-right"></i><strong>Next</strong> <span>How NOT to call Robinhood&#8217;s secret API with Python</span></a></li>
+		<li class="previous"><a href="https://codecalamity.com/do-heatsinks-and-fans-make-a-difference-for-the-raspberry-pi-4/" rel="prev"><i class="fas fa-chevron-left"></i><strong>Previous</strong> <span>Do heatsinks and fans make a difference for the Raspberry Pi 4?</span></a></li>
+	</ul>
+						</div>
+					</div>
+
+					
+
+<h4 class="heading">
+	<i class="fas fa-hand-point-right"></i>You may also like...</h4>
+
+<ul class="related-posts group">
+	
+		<li class="related">
+		<article class="related-post">
+
+			<div class="related-thumbnail">
+				<a href="https://codecalamity.com/truffle-going-from-ganache-to-testnet-ropsten/">
+											<img src="https://codecalamity.com/wp-content/themes/minimer/img/thumb-medium.png" alt="Truffle: going from ganache to testnet (ropsten)" />
+																								</a>
+			</div><!--/.post-thumbnail-->
+			
+			<div class="related-inner">
+				
+				<h4 class="related-title">
+					<a href="https://codecalamity.com/truffle-going-from-ganache-to-testnet-ropsten/" rel="bookmark">Truffle: going from ganache to testnet (ropsten)</a>
+				</h4><!--/.post-title-->
+			
+			</div><!--/.related-inner-->
+
+		</article>
+	</li><!--/.related-->
+		<li class="related">
+		<article class="related-post">
+
+			<div class="related-thumbnail">
+				<a href="https://codecalamity.com/python-box-3-the-reddit-release/">
+											<img width="471" height="264" src="https://i0.wp.com/codecalamity.com/wp-content/uploads/2017/04/weird_box.png?resize=471%2C264&amp;ssl=1" class="attachment-minimer-medium size-minimer-medium wp-post-image" alt="" loading="lazy" srcset="https://i0.wp.com/codecalamity.com/wp-content/uploads/2017/04/weird_box.png?zoom=2&amp;resize=471%2C264&amp;ssl=1 942w, https://i0.wp.com/codecalamity.com/wp-content/uploads/2017/04/weird_box.png?zoom=3&amp;resize=471%2C264&amp;ssl=1 1413w" sizes="(max-width: 471px) 100vw, 471px" data-attachment-id="422" data-permalink="https://codecalamity.com/python-box-3-the-reddit-release/weird_box/" data-orig-file="https://i0.wp.com/codecalamity.com/wp-content/uploads/2017/04/weird_box.png?fit=471%2C471&amp;ssl=1" data-orig-size="471,471" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="weird_box" data-image-description="" data-medium-file="https://i0.wp.com/codecalamity.com/wp-content/uploads/2017/04/weird_box.png?fit=300%2C300&amp;ssl=1" data-large-file="https://i0.wp.com/codecalamity.com/wp-content/uploads/2017/04/weird_box.png?fit=471%2C471&amp;ssl=1" />																								</a>
+			</div><!--/.post-thumbnail-->
+			
+			<div class="related-inner">
+				
+				<h4 class="related-title">
+					<a href="https://codecalamity.com/python-box-3-the-reddit-release/" rel="bookmark">Python Box 3 &#8211; The reddit release</a>
+				</h4><!--/.post-title-->
+			
+			</div><!--/.related-inner-->
+
+		</article>
+	</li><!--/.related-->
+		<li class="related">
+		<article class="related-post">
+
+			<div class="related-thumbnail">
+				<a href="https://codecalamity.com/encoding-uhd-4k-hdr10-videos-with-ffmpeg/">
+											<img width="520" height="292" src="https://i2.wp.com/codecalamity.com/wp-content/uploads/2020/06/4k_crf_vs_bitrate_color.png?resize=520%2C292&amp;ssl=1" class="attachment-minimer-medium size-minimer-medium wp-post-image" alt="" loading="lazy" srcset="https://i2.wp.com/codecalamity.com/wp-content/uploads/2020/06/4k_crf_vs_bitrate_color.png?resize=520%2C292&amp;ssl=1 520w, https://i2.wp.com/codecalamity.com/wp-content/uploads/2020/06/4k_crf_vs_bitrate_color.png?resize=940%2C529&amp;ssl=1 940w" sizes="(max-width: 520px) 100vw, 520px" data-attachment-id="1496" data-permalink="https://codecalamity.com/encoding-uhd-4k-hdr10-videos-with-ffmpeg/4k_crf_vs_bitrate_color/" data-orig-file="https://i2.wp.com/codecalamity.com/wp-content/uploads/2020/06/4k_crf_vs_bitrate_color.png?fit=640%2C480&amp;ssl=1" data-orig-size="640,480" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="4k_crf_vs_bitrate_color" data-image-description="" data-medium-file="https://i2.wp.com/codecalamity.com/wp-content/uploads/2020/06/4k_crf_vs_bitrate_color.png?fit=300%2C225&amp;ssl=1" data-large-file="https://i2.wp.com/codecalamity.com/wp-content/uploads/2020/06/4k_crf_vs_bitrate_color.png?fit=640%2C480&amp;ssl=1" />																								</a>
+			</div><!--/.post-thumbnail-->
+			
+			<div class="related-inner">
+				
+				<h4 class="related-title">
+					<a href="https://codecalamity.com/encoding-uhd-4k-hdr10-videos-with-ffmpeg/" rel="bookmark">Encoding UHD 4K HDR10 videos with FFmpeg</a>
+				</h4><!--/.post-title-->
+			
+			</div><!--/.related-inner-->
+
+		</article>
+	</li><!--/.related-->
+		
+</ul><!--/.post-related-->
+
+					
+					
+<div id="comments" class="themeform">
+	
+		
+		<h3 class="heading">13 Responses</h3>
+	
+		<ul class="comment-tabs group">
+			<li class="active"><a href="#commentlist-container"><i class="fas fa-comments"></i>Comments<span>12</span></a></li>
+			<li><a href="#pinglist-container"><i class="fas fa-share"></i>Pingbacks<span>1</span></a></li>
+		</ul>
+
+				<div id="commentlist-container" class="comment-tab">
+			
+			<ol class="commentlist">
+						<li class="comment even thread-even depth-1" id="comment-21">
+				<div id="div-comment-21" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/7cc793fef3952fa40dc618203a7a1109?s=96&amp;d=blank&amp;r=pg' srcset='https://secure.gravatar.com/avatar/7cc793fef3952fa40dc618203a7a1109?s=192&#038;d=blank&#038;r=pg 2x' class='avatar avatar-96 photo' height='96' width='96' loading='lazy'/>			<cite class="fn"><a href='http://nowebsite.com/' rel='external nofollow ugc' class='url'>charlie weeks</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="index.html#comment-21">January 11, 2020 at 11:23 am</a>		</div>
+
+		<p>This was a fantastic detailed article.  I followed it step by step and it worked perfectly.  I just one question.  My system that is reading the video also wants a mjpeg still image.  Is there a way to get a still image out of this also.  Thanks for the hard work.</p>
+<div class='jetpack-comment-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-comment-wrapper-121112347-21-600b10b071aec' data-src='https://widgets.wp.com/likes/#blog_id=121112347&amp;comment_id=21&amp;origin=codecalamity.com&amp;obj_id=121112347-21-600b10b071aec' data-name='like-comment-frame-121112347-21-600b10b071aec'>
+<div class='likes-widget-placeholder comment-likes-widget-placeholder comment-likes'><span class='loading'>Loading...</span></div>
+<div class='comment-likes-widget jetpack-likes-widget comment-likes'><span class='comment-like-feedback'></span><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
+</div>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-21' data-commentid="21" data-postid="1041" data-belowelement="div-comment-21" data-respondelement="respond" data-replyto="Reply to charlie weeks" aria-label='Reply to charlie weeks'>Reply</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment byuser comment-author-chris-griffith bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-36">
+				<div id="div-comment-36" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/e740c7a4333a7b355bec7f6e4ab691ed?s=96&amp;d=blank&amp;r=pg' srcset='https://secure.gravatar.com/avatar/e740c7a4333a7b355bec7f6e4ab691ed?s=192&#038;d=blank&#038;r=pg 2x' class='avatar avatar-96 photo' height='96' width='96' loading='lazy'/>			<cite class="fn">Chris Griffith</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="index.html#comment-36">July 17, 2020 at 11:30 am</a>		</div>
+
+		<p>Hi Charlie, thanks for reading, apologizes for the delay as I somehow missed responding to this comment!</p>
+<p>If you haven&#8217;t figured out the issue by now, could you give me a bit more detail about how it also wants a still image? Like does it want it via a separate stream, or served up via a webpage or something?</p>
+<div class='jetpack-comment-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-comment-wrapper-121112347-36-600b10b071e9f' data-src='https://widgets.wp.com/likes/#blog_id=121112347&amp;comment_id=36&amp;origin=codecalamity.com&amp;obj_id=121112347-36-600b10b071e9f' data-name='like-comment-frame-121112347-36-600b10b071e9f'>
+<div class='likes-widget-placeholder comment-likes-widget-placeholder comment-likes'><span class='loading'>Loading...</span></div>
+<div class='comment-likes-widget jetpack-likes-widget comment-likes'><span class='comment-like-feedback'></span><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
+</div>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-36' data-commentid="36" data-postid="1041" data-belowelement="div-comment-36" data-respondelement="respond" data-replyto="Reply to Chris Griffith" aria-label='Reply to Chris Griffith'>Reply</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1 parent" id="comment-37">
+				<div id="div-comment-37" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/7cc793fef3952fa40dc618203a7a1109?s=96&amp;d=blank&amp;r=pg' srcset='https://secure.gravatar.com/avatar/7cc793fef3952fa40dc618203a7a1109?s=192&#038;d=blank&#038;r=pg 2x' class='avatar avatar-96 photo' height='96' width='96' loading='lazy'/>			<cite class="fn">Charlie Weeks</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="index.html#comment-37">July 18, 2020 at 6:12 am</a>		</div>
+
+		<p>First,I wanted to say thanks for the writeup.  I have setup 9 pi cameras in my home using your detailed setup.  They all feed into home-assistant; but home-assistant likes a snapshot as well.  So, it may not be the best method but what I did was add the following to the end of the ffmpeg command:</p>
+<p>-vf fps=1/20 -update 1 public/snapshot.jpg</p>
+<p>It takes a snapshot every 20 seconds and stores it in the rtsp_server public folder.  If you have any suggestions on how to improve this, I am open.</p>
+<div class='jetpack-comment-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-comment-wrapper-121112347-37-600b10b0721d6' data-src='https://widgets.wp.com/likes/#blog_id=121112347&amp;comment_id=37&amp;origin=codecalamity.com&amp;obj_id=121112347-37-600b10b0721d6' data-name='like-comment-frame-121112347-37-600b10b0721d6'>
+<div class='likes-widget-placeholder comment-likes-widget-placeholder comment-likes'><span class='loading'>Loading...</span></div>
+<div class='comment-likes-widget jetpack-likes-widget comment-likes'><span class='comment-like-feedback'></span><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
+</div>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-37' data-commentid="37" data-postid="1041" data-belowelement="div-comment-37" data-respondelement="respond" data-replyto="Reply to Charlie Weeks" aria-label='Reply to Charlie Weeks'>Reply</a></div>
+				</div>
+				<ul class="children">
+		<li class="comment byuser comment-author-chris-griffith bypostauthor odd alt depth-2" id="comment-38">
+				<div id="div-comment-38" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/e740c7a4333a7b355bec7f6e4ab691ed?s=96&amp;d=blank&amp;r=pg' srcset='https://secure.gravatar.com/avatar/e740c7a4333a7b355bec7f6e4ab691ed?s=192&#038;d=blank&#038;r=pg 2x' class='avatar avatar-96 photo' height='96' width='96' loading='lazy'/>			<cite class="fn">Chris Griffith</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="index.html#comment-38">July 19, 2020 at 10:33 am</a>		</div>
+
+		<p>That&#8217;s a great way to generate the images, the only caution I would say is not with the ffmpeg command, but the rapid update of the images on an SD card. Over the years I have had plenty of Pi SD cards fail if they were written to often (for example my piHole due to all its logging). I would suggest storing/accessing the images from <code>/dev/shm/</code> which is memory based storage.</p>
+<div class='jetpack-comment-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-comment-wrapper-121112347-38-600b10b072542' data-src='https://widgets.wp.com/likes/#blog_id=121112347&amp;comment_id=38&amp;origin=codecalamity.com&amp;obj_id=121112347-38-600b10b072542' data-name='like-comment-frame-121112347-38-600b10b072542'>
+<div class='likes-widget-placeholder comment-likes-widget-placeholder comment-likes'><span class='loading'>Loading...</span></div>
+<div class='comment-likes-widget jetpack-likes-widget comment-likes'><span class='comment-like-feedback'></span><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
+</div>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-38' data-commentid="38" data-postid="1041" data-belowelement="div-comment-38" data-respondelement="respond" data-replyto="Reply to Chris Griffith" aria-label='Reply to Chris Griffith'>Reply</a></div>
+				</div>
+				</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1 parent" id="comment-64">
+				<div id="div-comment-64" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/7256de6b407ab6b934f27585a2f63852?s=96&amp;d=blank&amp;r=pg' srcset='https://secure.gravatar.com/avatar/7256de6b407ab6b934f27585a2f63852?s=192&#038;d=blank&#038;r=pg 2x' class='avatar avatar-96 photo' height='96' width='96' loading='lazy'/>			<cite class="fn">Carlos Eduardo Guimaraes</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="index.html#comment-64">October 18, 2020 at 7:27 am</a>		</div>
+
+		<p>HI, thanks for the article, really great!!!!<br />
+I have a small project where my goal is to record with raspberry two webcams at same enviroment, so single audio, but two videos in different directions, any suggestion on how to achieve that?</p>
+<div class='jetpack-comment-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-comment-wrapper-121112347-64-600b10b0728bf' data-src='https://widgets.wp.com/likes/#blog_id=121112347&amp;comment_id=64&amp;origin=codecalamity.com&amp;obj_id=121112347-64-600b10b0728bf' data-name='like-comment-frame-121112347-64-600b10b0728bf'>
+<div class='likes-widget-placeholder comment-likes-widget-placeholder comment-likes'><span class='loading'>Loading...</span></div>
+<div class='comment-likes-widget jetpack-likes-widget comment-likes'><span class='comment-like-feedback'></span><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
+</div>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-64' data-commentid="64" data-postid="1041" data-belowelement="div-comment-64" data-respondelement="respond" data-replyto="Reply to Carlos Eduardo Guimaraes" aria-label='Reply to Carlos Eduardo Guimaraes'>Reply</a></div>
+				</div>
+				<ul class="children">
+		<li class="comment byuser comment-author-chris-griffith bypostauthor odd alt depth-2" id="comment-66">
+				<div id="div-comment-66" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/e740c7a4333a7b355bec7f6e4ab691ed?s=96&amp;d=blank&amp;r=pg' srcset='https://secure.gravatar.com/avatar/e740c7a4333a7b355bec7f6e4ab691ed?s=192&#038;d=blank&#038;r=pg 2x' class='avatar avatar-96 photo' height='96' width='96' loading='lazy'/>			<cite class="fn">Chris Griffith</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="index.html#comment-66">October 19, 2020 at 9:29 am</a>		</div>
+
+		<p>When you say same environment, do you mean on the same Raspberry Pi? If so, it is possible if the webcams have built-in H.264 encoding so that all FFmpeg is doing is wrapping them up in a RTSP stream. Need at least one of them to have built in encoding if doing it with same Pi, as the built in hardware encoder only supports one stream at a time.</p>
+<div class='jetpack-comment-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-comment-wrapper-121112347-66-600b10b072c4b' data-src='https://widgets.wp.com/likes/#blog_id=121112347&amp;comment_id=66&amp;origin=codecalamity.com&amp;obj_id=121112347-66-600b10b072c4b' data-name='like-comment-frame-121112347-66-600b10b072c4b'>
+<div class='likes-widget-placeholder comment-likes-widget-placeholder comment-likes'><span class='loading'>Loading...</span></div>
+<div class='comment-likes-widget jetpack-likes-widget comment-likes'><span class='comment-like-feedback'></span><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
+</div>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-66' data-commentid="66" data-postid="1041" data-belowelement="div-comment-66" data-respondelement="respond" data-replyto="Reply to Chris Griffith" aria-label='Reply to Chris Griffith'>Reply</a></div>
+				</div>
+				</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1 parent" id="comment-69">
+				<div id="div-comment-69" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/11feb8b717235db5a7c1e3a6ce4805aa?s=96&amp;d=blank&amp;r=pg' srcset='https://secure.gravatar.com/avatar/11feb8b717235db5a7c1e3a6ce4805aa?s=192&#038;d=blank&#038;r=pg 2x' class='avatar avatar-96 photo' height='96' width='96' loading='lazy'/>			<cite class="fn">Robyn Hannah</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="index.html#comment-69">October 21, 2020 at 9:43 pm</a>		</div>
+
+		<p>Thanks for this guide, I came to it after trying to install ffmpeg from source, I am using Pi OS Lite, latest with full upgrade when I start.<br />
+I am actually trying to compile ffmpeg so that I can get the SRT library attached to it but have cut back my attempts to trying to get ffmpeg to make at all without errors. There are a couple of differences in the git, configure and make that you are using, but nothing meaningful that I can see. Anyway, I thought i would just do your method. Unfortunately it also makes with errors. I suspect that either the latest OS or latest ffmpeg is not compatible with Pi. (BTW I did try a Ubuntu OS on Pi but it also fails)<br />
+The last section of the terminal display using your process gives __atomic_fetch_sub_8 errors, but there are also errors in the config.log file when you look at it,’<br />
+Have you tried compiling ffmpeg lately? Does it work?<br />
+Thanks<br />
+Robyn</p>
+<div class='jetpack-comment-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-comment-wrapper-121112347-69-600b10b072f68' data-src='https://widgets.wp.com/likes/#blog_id=121112347&amp;comment_id=69&amp;origin=codecalamity.com&amp;obj_id=121112347-69-600b10b072f68' data-name='like-comment-frame-121112347-69-600b10b072f68'>
+<div class='likes-widget-placeholder comment-likes-widget-placeholder comment-likes'><span class='loading'>Loading...</span></div>
+<div class='comment-likes-widget jetpack-likes-widget comment-likes'><span class='comment-like-feedback'></span><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
+</div>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-69' data-commentid="69" data-postid="1041" data-belowelement="div-comment-69" data-respondelement="respond" data-replyto="Reply to Robyn Hannah" aria-label='Reply to Robyn Hannah'>Reply</a></div>
+				</div>
+				<ul class="children">
+		<li class="comment byuser comment-author-chris-griffith bypostauthor odd alt depth-2" id="comment-70">
+				<div id="div-comment-70" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/e740c7a4333a7b355bec7f6e4ab691ed?s=96&amp;d=blank&amp;r=pg' srcset='https://secure.gravatar.com/avatar/e740c7a4333a7b355bec7f6e4ab691ed?s=192&#038;d=blank&#038;r=pg 2x' class='avatar avatar-96 photo' height='96' width='96' loading='lazy'/>			<cite class="fn">Chris Griffith</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="index.html#comment-70">October 21, 2020 at 11:39 pm</a>		</div>
+
+		<p>Hi Robyn, sorry it&#8217;s not working for some reason. Will try a build tomorrow if I have time. What Raspberry Pi model are you running it on? I take it doing a full build without anything disabled?</p>
+<div class='jetpack-comment-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-comment-wrapper-121112347-70-600b10b0732c8' data-src='https://widgets.wp.com/likes/#blog_id=121112347&amp;comment_id=70&amp;origin=codecalamity.com&amp;obj_id=121112347-70-600b10b0732c8' data-name='like-comment-frame-121112347-70-600b10b0732c8'>
+<div class='likes-widget-placeholder comment-likes-widget-placeholder comment-likes'><span class='loading'>Loading...</span></div>
+<div class='comment-likes-widget jetpack-likes-widget comment-likes'><span class='comment-like-feedback'></span><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
+</div>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-70' data-commentid="70" data-postid="1041" data-belowelement="div-comment-70" data-respondelement="respond" data-replyto="Reply to Chris Griffith" aria-label='Reply to Chris Griffith'>Reply</a></div>
+				</div>
+				</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1 parent" id="comment-71">
+				<div id="div-comment-71" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/11feb8b717235db5a7c1e3a6ce4805aa?s=96&amp;d=blank&amp;r=pg' srcset='https://secure.gravatar.com/avatar/11feb8b717235db5a7c1e3a6ce4805aa?s=192&#038;d=blank&#038;r=pg 2x' class='avatar avatar-96 photo' height='96' width='96' loading='lazy'/>			<cite class="fn">Robyn Hannah</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="index.html#comment-71">October 22, 2020 at 5:28 am</a>		</div>
+
+		<p>Thanks I am using a Pi 3 B+ I basically followed your method doing cut and paste where I could</p>
+<div class='jetpack-comment-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-comment-wrapper-121112347-71-600b10b0735f1' data-src='https://widgets.wp.com/likes/#blog_id=121112347&amp;comment_id=71&amp;origin=codecalamity.com&amp;obj_id=121112347-71-600b10b0735f1' data-name='like-comment-frame-121112347-71-600b10b0735f1'>
+<div class='likes-widget-placeholder comment-likes-widget-placeholder comment-likes'><span class='loading'>Loading...</span></div>
+<div class='comment-likes-widget jetpack-likes-widget comment-likes'><span class='comment-like-feedback'></span><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
+</div>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-71' data-commentid="71" data-postid="1041" data-belowelement="div-comment-71" data-respondelement="respond" data-replyto="Reply to Robyn Hannah" aria-label='Reply to Robyn Hannah'>Reply</a></div>
+				</div>
+				<ul class="children">
+		<li class="comment byuser comment-author-chris-griffith bypostauthor odd alt depth-2" id="comment-72">
+				<div id="div-comment-72" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/e740c7a4333a7b355bec7f6e4ab691ed?s=96&amp;d=blank&amp;r=pg' srcset='https://secure.gravatar.com/avatar/e740c7a4333a7b355bec7f6e4ab691ed?s=192&#038;d=blank&#038;r=pg 2x' class='avatar avatar-96 photo' height='96' width='96' loading='lazy'/>			<cite class="fn">Chris Griffith</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="index.html#comment-72">October 22, 2020 at 8:12 am</a>		</div>
+
+		<p>Looks like the configure needs an extra argument of <code>--extra-ldflags="-latomic"</code>  (Tested on a Pi 4 last night, was able to reproduce your error and get it working with that flag). I also had issues with wavpack for some reason, so going to look into those today and update the script. Thanks for bringing it to my attention!</p>
+<div class='jetpack-comment-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-comment-wrapper-121112347-72-600b10b07392e' data-src='https://widgets.wp.com/likes/#blog_id=121112347&amp;comment_id=72&amp;origin=codecalamity.com&amp;obj_id=121112347-72-600b10b07392e' data-name='like-comment-frame-121112347-72-600b10b07392e'>
+<div class='likes-widget-placeholder comment-likes-widget-placeholder comment-likes'><span class='loading'>Loading...</span></div>
+<div class='comment-likes-widget jetpack-likes-widget comment-likes'><span class='comment-like-feedback'></span><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
+</div>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-72' data-commentid="72" data-postid="1041" data-belowelement="div-comment-72" data-respondelement="respond" data-replyto="Reply to Chris Griffith" aria-label='Reply to Chris Griffith'>Reply</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment byuser comment-author-chris-griffith bypostauthor even depth-2" id="comment-73">
+				<div id="div-comment-73" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/e740c7a4333a7b355bec7f6e4ab691ed?s=96&amp;d=blank&amp;r=pg' srcset='https://secure.gravatar.com/avatar/e740c7a4333a7b355bec7f6e4ab691ed?s=192&#038;d=blank&#038;r=pg 2x' class='avatar avatar-96 photo' height='96' width='96' loading='lazy'/>			<cite class="fn">Chris Griffith</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="index.html#comment-73">October 22, 2020 at 8:57 am</a>		</div>
+
+		<p>Master branch has been updated with fixes. I was apparently not watching the repo and others have also got some additional fixes in, so if you were having any other troubles they might also be fixed in latest version!</p>
+<div class='jetpack-comment-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-comment-wrapper-121112347-73-600b10b073c61' data-src='https://widgets.wp.com/likes/#blog_id=121112347&amp;comment_id=73&amp;origin=codecalamity.com&amp;obj_id=121112347-73-600b10b073c61' data-name='like-comment-frame-121112347-73-600b10b073c61'>
+<div class='likes-widget-placeholder comment-likes-widget-placeholder comment-likes'><span class='loading'>Loading...</span></div>
+<div class='comment-likes-widget jetpack-likes-widget comment-likes'><span class='comment-like-feedback'></span><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
+</div>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-73' data-commentid="73" data-postid="1041" data-belowelement="div-comment-73" data-respondelement="respond" data-replyto="Reply to Chris Griffith" aria-label='Reply to Chris Griffith'>Reply</a></div>
+				</div>
+				</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1" id="comment-74">
+				<div id="div-comment-74" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/11feb8b717235db5a7c1e3a6ce4805aa?s=96&amp;d=blank&amp;r=pg' srcset='https://secure.gravatar.com/avatar/11feb8b717235db5a7c1e3a6ce4805aa?s=192&#038;d=blank&#038;r=pg 2x' class='avatar avatar-96 photo' height='96' width='96' loading='lazy'/>			<cite class="fn">Robyn Hannah</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="index.html#comment-74">October 22, 2020 at 4:45 pm</a>		</div>
+
+		<p>Thanks, after a week or more trying to get ffmpeg to compile on a Pi I thought I was cooked!</p>
+<div class='jetpack-comment-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-comment-wrapper-121112347-74-600b10b073f48' data-src='https://widgets.wp.com/likes/#blog_id=121112347&amp;comment_id=74&amp;origin=codecalamity.com&amp;obj_id=121112347-74-600b10b073f48' data-name='like-comment-frame-121112347-74-600b10b073f48'>
+<div class='likes-widget-placeholder comment-likes-widget-placeholder comment-likes'><span class='loading'>Loading...</span></div>
+<div class='comment-likes-widget jetpack-likes-widget comment-likes'><span class='comment-like-feedback'></span><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
+</div>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-74' data-commentid="74" data-postid="1041" data-belowelement="div-comment-74" data-respondelement="respond" data-replyto="Reply to Robyn Hannah" aria-label='Reply to Robyn Hannah'>Reply</a></div>
+				</div>
+				</li><!-- #comment-## -->
+	
+			</ol><!--/.commentlist-->
+			
+						
+		</div>	
+				
+				<div id="pinglist-container" class="comment-tab">
+			
+			<ol class="pinglist">
+									<li class="ping">
+						<div class="ping-link"><a href='https://codecalamity.com/a-raspberry-pi-streaming-camera-using-mpeg-dash-hls-or-rtsp/' rel='external nofollow ugc' class='url'>A Raspberry Pi Streaming Camera using MPEG-DASH, HLS or RTSP - Code Calamity</a></div>
+						<div class="ping-meta">August 10, 2020</div>
+						<div class="ping-content"><p>[&#8230;] is an improvement on my previous article, Raspberry Pi Hardware Accelerated RTSP Camera, now with the option of using more modern technology, MPEG-DASH and HLS! First off, if you [&#8230;]</p>
+<div class='jetpack-comment-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-comment-wrapper-121112347-50-600b10b07411e' data-src='https://widgets.wp.com/likes/#blog_id=121112347&amp;comment_id=50&amp;origin=codecalamity.com&amp;obj_id=121112347-50-600b10b07411e' data-name='like-comment-frame-121112347-50-600b10b07411e'>
+<div class='likes-widget-placeholder comment-likes-widget-placeholder comment-likes'><span class='loading'>Loading...</span></div>
+<div class='comment-likes-widget jetpack-likes-widget comment-likes'><span class='comment-like-feedback'></span><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
+</div>
+</div>
+					</li>
+							</ol><!--/.pinglist-->
+			
+		</div>
+		
+		
+	
+		<div id="respond" class="comment-respond">
+							<h3 id="reply-title" class="comment-reply-title">Thoughts, issues, comments? Leave a reply...					<small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small>
+				</h3>
+						<form id="commentform" class="comment-form">
+				<iframe
+					title="Comment Form"
+					src="https://jetpack.wordpress.com/jetpack-comment/?blogid=121112347&amp;postid=1041&amp;comment_registration=0&amp;require_name_email=1&amp;stc_enabled=1&amp;stb_enabled=1&amp;show_avatars=1&amp;avatar_default=blank&amp;greeting=Thoughts%2C+issues%2C+comments%3F+Leave+a+reply...&amp;greeting_reply=Leave+a+Reply+to+%25s&amp;color_scheme=light&amp;lang=en_US&amp;jetpack_version=9.3.1&amp;show_cookie_consent=0&amp;has_cookie_consent=0&amp;token_key=%3Bnormal%3B&amp;sig=4eef1232931d05fae900a7467b0e3e400fdf650d#parent=https%3A%2F%2Fcodecalamity.com%2Fraspberry-pi-hardware-accelerated-h264-webcam-security-camera%2F"
+											name="jetpack_remote_comment"
+						style="width:100%; height: 430px; border:0;"
+										class="jetpack_remote_comment"
+					id="jetpack_remote_comment"
+					sandbox="allow-same-origin allow-top-navigation allow-scripts allow-forms allow-popups"
+				>
+									</iframe>
+									<!--[if !IE]><!-->
+					<script>
+						document.addEventListener('DOMContentLoaded', function () {
+							var commentForms = document.getElementsByClassName('jetpack_remote_comment');
+							for (var i = 0; i < commentForms.length; i++) {
+								commentForms[i].allowTransparency = false;
+								commentForms[i].scrolling = 'no';
+							}
+						});
+					</script>
+					<!--<![endif]-->
+							</form>
+		</div>
+
+		
+		<input type="hidden" name="comment_parent" id="comment_parent" value="" />
+
+		
+</div><!--/#comments-->					
+				</div>
+			</div>
+
+		</article><!--/.post-->
+		
+</div><!--/.content-->
+
+
+	<div class="sidebar s1">
+	
+		<div class="sidebar-skewed">
+		
+			<div class="sidebar-skew"><div class="sidebar-skew-inner"></div></div>
+			<div class="sidebar-skew-bottom"><div class="sidebar-skew-inner-bottom"></div></div>
+			
+					
+		</div>
+		<div class="clear skew-clear"></div>
+		
+		<div class="sidebar-content dark">
+
+			<div id="text-11" class="widget widget_text">			<div class="textwidget"><p>A home for professional coders&#8217; articles, opinions and ideas.</p>
+</div>
+		</div><div id="search-3" class="widget widget_search"><h3 class="group"><span>Search</span></h3><form method="get" class="searchform themeform" action="https://codecalamity.com/">
+	<div>
+		<input type="text" class="search" name="s" onblur="if(this.value=='')this.value='To search type and hit enter';" onfocus="if(this.value=='To search type and hit enter')this.value='';" value="To search type and hit enter" />
+	</div>
+</form></div>
+		<div id="recent-posts-7" class="widget widget_recent_entries">
+		<h3 class="group"><span>Recent Posts</span></h3>
+		<ul>
+											<li>
+					<a href="https://codecalamity.com/keep-windows-from-going-to-sleep-no-power-settings-needed/">Keep Windows from going to sleep, no power settings needed!</a>
+									</li>
+											<li>
+					<a href="https://codecalamity.com/favorite-3d-prints-of-2020/">Favorite 3D Prints of 2020</a>
+									</li>
+											<li>
+					<a href="https://codecalamity.com/create-an-image-in-task-manager-from-cpu-usage/">Create an image in Task Manager from CPU Usage</a>
+									</li>
+											<li>
+					<a href="https://codecalamity.com/hdr-hdr10-hdr10-hlg-and-dolby-vision/">HDR, HDR10, HDR10+, HLG and Dolby Vision</a>
+									</li>
+											<li>
+					<a href="https://codecalamity.com/a-raspberry-pi-streaming-camera-using-mpeg-dash-hls-or-rtsp/">A  Raspberry Pi Streaming Camera using MPEG-DASH, HLS or RTSP</a>
+									</li>
+											<li>
+					<a href="https://codecalamity.com/encoding-uhd-4k-hdr10-videos-with-ffmpeg/">Encoding UHD 4K HDR10 videos with FFmpeg</a>
+									</li>
+											<li>
+					<a href="https://codecalamity.com/let-it-django/">Let it Djan-go!</a>
+									</li>
+					</ul>
+
+		</div><div id="categories-4" class="widget widget_categories"><h3 class="group"><span>Categories</span></h3><form action="https://codecalamity.com/" method="get"><label class="screen-reader-text" for="cat">Categories</label><select  name='cat' id='cat' class='postform' >
+	<option value='-1'>Select Category</option>
+	<option class="level-0" value="174">Certification&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="9">Coding&nbsp;&nbsp;(38)</option>
+	<option class="level-1" value="11">&nbsp;&nbsp;&nbsp;Opinion&nbsp;&nbsp;(10)</option>
+	<option class="level-1" value="12">&nbsp;&nbsp;&nbsp;Overview&nbsp;&nbsp;(23)</option>
+	<option class="level-1" value="19">&nbsp;&nbsp;&nbsp;Review&nbsp;&nbsp;(1)</option>
+	<option class="level-1" value="10">&nbsp;&nbsp;&nbsp;Tutorial&nbsp;&nbsp;(16)</option>
+	<option class="level-0" value="173">DevOps&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="165">Hardware Build&nbsp;&nbsp;(2)</option>
+	<option class="level-0" value="13">Off Topic&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="25">Project Management&nbsp;&nbsp;(3)</option>
+	<option class="level-0" value="1">Uncategorized&nbsp;&nbsp;(5)</option>
+</select>
+</form>
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "cat" );
+	function onCatChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value > 0 ) {
+			dropdown.parentNode.submit();
+		}
+	}
+	dropdown.onchange = onCatChange;
+})();
+/* ]]> */
+</script>
+
+			</div><div id="tag_cloud-5" class="widget widget_tag_cloud"><h3 class="group"><span>Tags</span></h3><div class="tagcloud"><a href="https://codecalamity.com/tag/amazon/" class="tag-cloud-link tag-link-39 tag-link-position-1" style="font-size: 10.135593220339pt;" aria-label="amazon (2 items)">amazon</a>
+<a href="https://codecalamity.com/tag/basic/" class="tag-cloud-link tag-link-6 tag-link-position-2" style="font-size: 14.525423728814pt;" aria-label="basic (6 items)">basic</a>
+<a href="https://codecalamity.com/tag/bitrate/" class="tag-cloud-link tag-link-134 tag-link-position-3" style="font-size: 10.135593220339pt;" aria-label="bitrate (2 items)">bitrate</a>
+<a href="https://codecalamity.com/tag/book/" class="tag-cloud-link tag-link-21 tag-link-position-4" style="font-size: 8pt;" aria-label="book (1 item)">book</a>
+<a href="https://codecalamity.com/tag/box/" class="tag-cloud-link tag-link-26 tag-link-position-5" style="font-size: 11.559322033898pt;" aria-label="box (3 items)">box</a>
+<a href="https://codecalamity.com/tag/code/" class="tag-cloud-link tag-link-17 tag-link-position-6" style="font-size: 18.084745762712pt;" aria-label="code (13 items)">code</a>
+<a href="https://codecalamity.com/tag/coding/" class="tag-cloud-link tag-link-16 tag-link-position-7" style="font-size: 18.440677966102pt;" aria-label="coding (14 items)">coding</a>
+<a href="https://codecalamity.com/tag/crf/" class="tag-cloud-link tag-link-135 tag-link-position-8" style="font-size: 10.135593220339pt;" aria-label="CRF (2 items)">CRF</a>
+<a href="https://codecalamity.com/tag/dash/" class="tag-cloud-link tag-link-89 tag-link-position-9" style="font-size: 10.135593220339pt;" aria-label="DASH (2 items)">DASH</a>
+<a href="https://codecalamity.com/tag/decorators/" class="tag-cloud-link tag-link-29 tag-link-position-10" style="font-size: 10.135593220339pt;" aria-label="decorators (2 items)">decorators</a>
+<a href="https://codecalamity.com/tag/documentation/" class="tag-cloud-link tag-link-15 tag-link-position-11" style="font-size: 8pt;" aria-label="documentation (1 item)">documentation</a>
+<a href="https://codecalamity.com/tag/dolby-vision/" class="tag-cloud-link tag-link-186 tag-link-position-12" style="font-size: 10.135593220339pt;" aria-label="dolby vision (2 items)">dolby vision</a>
+<a href="https://codecalamity.com/tag/encoding/" class="tag-cloud-link tag-link-127 tag-link-position-13" style="font-size: 13.694915254237pt;" aria-label="encoding (5 items)">encoding</a>
+<a href="https://codecalamity.com/tag/exceptions/" class="tag-cloud-link tag-link-23 tag-link-position-14" style="font-size: 10.135593220339pt;" aria-label="exceptions (2 items)">exceptions</a>
+<a href="https://codecalamity.com/tag/fastflix/" class="tag-cloud-link tag-link-139 tag-link-position-15" style="font-size: 10.135593220339pt;" aria-label="fastflix (2 items)">fastflix</a>
+<a href="https://codecalamity.com/tag/ffmpeg/" class="tag-cloud-link tag-link-121 tag-link-position-16" style="font-size: 12.745762711864pt;" aria-label="ffmpeg (4 items)">ffmpeg</a>
+<a href="https://codecalamity.com/tag/h264/" class="tag-cloud-link tag-link-130 tag-link-position-17" style="font-size: 11.559322033898pt;" aria-label="h264 (3 items)">h264</a>
+<a href="https://codecalamity.com/tag/h265/" class="tag-cloud-link tag-link-131 tag-link-position-18" style="font-size: 10.135593220339pt;" aria-label="h265 (2 items)">h265</a>
+<a href="https://codecalamity.com/tag/hardware/" class="tag-cloud-link tag-link-154 tag-link-position-19" style="font-size: 11.559322033898pt;" aria-label="hardware (3 items)">hardware</a>
+<a href="https://codecalamity.com/tag/hdr/" class="tag-cloud-link tag-link-184 tag-link-position-20" style="font-size: 10.135593220339pt;" aria-label="hdr (2 items)">hdr</a>
+<a href="https://codecalamity.com/tag/hdr10/" class="tag-cloud-link tag-link-185 tag-link-position-21" style="font-size: 10.135593220339pt;" aria-label="hdr10 (2 items)">hdr10</a>
+<a href="https://codecalamity.com/tag/hdr10-2/" class="tag-cloud-link tag-link-187 tag-link-position-22" style="font-size: 10.135593220339pt;" aria-label="hdr10+ (2 items)">hdr10+</a>
+<a href="https://codecalamity.com/tag/hls/" class="tag-cloud-link tag-link-90 tag-link-position-23" style="font-size: 10.135593220339pt;" aria-label="HLS (2 items)">HLS</a>
+<a href="https://codecalamity.com/tag/ip-camera/" class="tag-cloud-link tag-link-156 tag-link-position-24" style="font-size: 10.135593220339pt;" aria-label="ip camera (2 items)">ip camera</a>
+<a href="https://codecalamity.com/tag/learning/" class="tag-cloud-link tag-link-7 tag-link-position-25" style="font-size: 15.118644067797pt;" aria-label="learning (7 items)">learning</a>
+<a href="https://codecalamity.com/tag/logging/" class="tag-cloud-link tag-link-5 tag-link-position-26" style="font-size: 10.135593220339pt;" aria-label="logging (2 items)">logging</a>
+<a href="https://codecalamity.com/tag/matplotlib/" class="tag-cloud-link tag-link-43 tag-link-position-27" style="font-size: 10.135593220339pt;" aria-label="matplotlib (2 items)">matplotlib</a>
+<a href="https://codecalamity.com/tag/multiprocessing/" class="tag-cloud-link tag-link-44 tag-link-position-28" style="font-size: 12.745762711864pt;" aria-label="multiprocessing (4 items)">multiprocessing</a>
+<a href="https://codecalamity.com/tag/overview/" class="tag-cloud-link tag-link-18 tag-link-position-29" style="font-size: 15.118644067797pt;" aria-label="overview (7 items)">overview</a>
+<a href="https://codecalamity.com/tag/pi/" class="tag-cloud-link tag-link-146 tag-link-position-30" style="font-size: 11.559322033898pt;" aria-label="pi (3 items)">pi</a>
+<a href="https://codecalamity.com/tag/python/" class="tag-cloud-link tag-link-4 tag-link-position-31" style="font-size: 22pt;" aria-label="python (29 items)">python</a>
+<a href="https://codecalamity.com/tag/python-3/" class="tag-cloud-link tag-link-100 tag-link-position-32" style="font-size: 11.559322033898pt;" aria-label="python 3 (3 items)">python 3</a>
+<a href="https://codecalamity.com/tag/raspberry/" class="tag-cloud-link tag-link-144 tag-link-position-33" style="font-size: 11.559322033898pt;" aria-label="raspberry (3 items)">raspberry</a>
+<a href="https://codecalamity.com/tag/raspberry-pi/" class="tag-cloud-link tag-link-161 tag-link-position-34" style="font-size: 11.559322033898pt;" aria-label="raspberry pi (3 items)">raspberry pi</a>
+<a href="https://codecalamity.com/tag/raspberrypi/" class="tag-cloud-link tag-link-145 tag-link-position-35" style="font-size: 12.745762711864pt;" aria-label="raspberrypi (4 items)">raspberrypi</a>
+<a href="https://codecalamity.com/tag/reusables/" class="tag-cloud-link tag-link-27 tag-link-position-36" style="font-size: 10.135593220339pt;" aria-label="reusables (2 items)">reusables</a>
+<a href="https://codecalamity.com/tag/review/" class="tag-cloud-link tag-link-20 tag-link-position-37" style="font-size: 8pt;" aria-label="review (1 item)">review</a>
+<a href="https://codecalamity.com/tag/server/" class="tag-cloud-link tag-link-86 tag-link-position-38" style="font-size: 10.135593220339pt;" aria-label="server (2 items)">server</a>
+<a href="https://codecalamity.com/tag/ssim/" class="tag-cloud-link tag-link-133 tag-link-position-39" style="font-size: 10.135593220339pt;" aria-label="SSIM (2 items)">SSIM</a>
+<a href="https://codecalamity.com/tag/subprocess/" class="tag-cloud-link tag-link-24 tag-link-position-40" style="font-size: 10.135593220339pt;" aria-label="subprocess (2 items)">subprocess</a>
+<a href="https://codecalamity.com/tag/threading/" class="tag-cloud-link tag-link-47 tag-link-position-41" style="font-size: 10.135593220339pt;" aria-label="threading (2 items)">threading</a>
+<a href="https://codecalamity.com/tag/tutorial/" class="tag-cloud-link tag-link-8 tag-link-position-42" style="font-size: 15.118644067797pt;" aria-label="tutorial (7 items)">tutorial</a>
+<a href="https://codecalamity.com/tag/windows/" class="tag-cloud-link tag-link-143 tag-link-position-43" style="font-size: 10.135593220339pt;" aria-label="windows (2 items)">windows</a>
+<a href="https://codecalamity.com/tag/wrappers/" class="tag-cloud-link tag-link-28 tag-link-position-44" style="font-size: 10.135593220339pt;" aria-label="wrappers (2 items)">wrappers</a>
+<a href="https://codecalamity.com/tag/x265/" class="tag-cloud-link tag-link-125 tag-link-position-45" style="font-size: 10.135593220339pt;" aria-label="x265 (2 items)">x265</a></div>
+</div><div id="rss_links-5" class="widget widget_rss_links"><ul><li><a target="_self" href="https://codecalamity.com/feed/" title="Subscribe to Posts">RSS - Posts</a></li><li><a target="_self" href="https://codecalamity.com/comments/feed/" title="Subscribe to Comments">RSS - Comments</a></li></ul>
+</div><div id="text-13" class="widget widget_text"><h3 class="group"><span>Staying Legal</span></h3>			<div class="textwidget"><p><a href="https://codecalamity.com/cookie-policy-us-3/">Cookie Policy</a></p>
+</div>
+		</div>			
+		</div><!--/.sidebar-content-->
+		
+	</div><!--/.sidebar-->
+	
+
+				</div><!--/.main-inner-->
+			</div><!--/.main-->	
+		</div><!--/.container-inner-->
+	</div><!--/.container-->
+	
+	<footer id="footer">
+	
+					
+				
+				
+		<div id="footer-bottom">
+			
+			<a id="back-to-top" href="#"><i class="fas fa-angle-up"></i></a>
+				
+			<div class="pad group">
+				
+				<div class="grid one-full">
+					
+										
+					<div id="copyright">
+													<p>Code Calamity &copy; 2021. All Rights Reserved.</p>
+											</div><!--/#copyright-->
+					
+										<div id="credit">
+						<p>Powered by <a href="http://wordpress.org/" rel="nofollow">WordPress</a>. Theme by <a href="http://alx.media/" rel="nofollow">Alx</a>.</p>
+					</div><!--/#credit-->
+										
+				</div>
+				
+				<div class="grid one-full">	
+																				</div>
+			
+			</div><!--/.pad-->
+
+		</div><!--/#footer-bottom-->
+
+	</footer><!--/#footer-->
+	
+</div><!--/#wrapper-->
+
+	<style>
+		.twitter-tweet.cmplz-blocked-content-container {
+			padding: 10px 40px;
+		}
+	</style>
+		<style>
+		.cmplz-placeholder-element > blockquote.fb-xfbml-parse-ignore {
+			margin: 0 20px;
+		}
+	</style>
+		<div style="display:none">
+	<div class="grofile-hash-map-7cc793fef3952fa40dc618203a7a1109">
+	</div>
+	<div class="grofile-hash-map-e740c7a4333a7b355bec7f6e4ab691ed">
+	</div>
+	<div class="grofile-hash-map-7256de6b407ab6b934f27585a2f63852">
+	</div>
+	<div class="grofile-hash-map-11feb8b717235db5a7c1e3a6ce4805aa">
+	</div>
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/codecalamity.com\/raspberry-pi-hardware-accelerated-h264-webcam-security-camera\/":1041};
+	</script>
+					<div id="sharing_email" style="display: none;">
+		<form action="https://codecalamity.com/raspberry-pi-hardware-accelerated-h264-webcam-security-camera/" method="post">
+			<label for="target_email">Send to Email Address</label>
+			<input type="email" name="target_email" id="target_email" value="" />
+
+			
+				<label for="source_name">Your Name</label>
+				<input type="text" name="source_name" id="source_name" value="" />
+
+				<label for="source_email">Your Email Address</label>
+				<input type="email" name="source_email" id="source_email" value="" />
+
+						<input type="text" id="jetpack-source_f_name" name="source_f_name" class="input" value="" size="25" autocomplete="off" title="This field is for validation and should not be changed" />
+			
+			<img style="float: right; display: none" class="loading" src="https://codecalamity.com/wp-content/plugins/jetpack/modules/sharedaddy/images/loading.gif" alt="loading" width="16" height="16" />
+			<input type="submit" value="Send Email" class="sharing_send" />
+			<a rel="nofollow" href="#cancel" class="sharing_cancel" role="button">Cancel</a>
+
+			<div class="errors errors-1" style="display: none;">
+				Post was not sent - check your email addresses!			</div>
+
+			<div class="errors errors-2" style="display: none;">
+				Email check failed, please try again			</div>
+
+			<div class="errors errors-3" style="display: none;">
+				Sorry, your blog cannot share posts by email.			</div>
+		</form>
+	</div>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/9.3.1/_inc/build/photon/photon.min.js' id='jetpack-photon-js'></script>
+<script type='text/javascript' src='https://c0.wp.com/c/5.6/wp-includes/js/jquery/ui/effect.min.js' id='jquery-effects-core-js'></script>
+<script type='text/javascript' src='https://c0.wp.com/c/5.6/wp-includes/js/jquery/ui/effect-slide.min.js' id='jquery-effects-slide-js'></script>
+<script type='text/javascript' src='https://c0.wp.com/c/5.6/wp-includes/js/jquery/ui/effect-highlight.min.js' id='jquery-effects-highlight-js'></script>
+<script type='text/javascript' src='https://c0.wp.com/c/5.6/wp-includes/js/jquery/ui/effect-fold.min.js' id='jquery-effects-fold-js'></script>
+<script type='text/javascript' src='https://c0.wp.com/c/5.6/wp-includes/js/jquery/ui/effect-blind.min.js' id='jquery-effects-blind-js'></script>
+<script type='text/javascript' src='https://codecalamity.com/wp-content/plugins/show-hidecollapse-expand/assets/js/bg-show-hide.js?ver=5.6' id='bg-show-hide-script-js'></script>
+<script type='text/javascript' src='https://secure.gravatar.com/js/gprofiles.js?ver=202103' id='grofiles-cards-js'></script>
+<script type='text/javascript' id='wpgroho-js-extra'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/9.3.1/modules/wpgroho.js' id='wpgroho-js'></script>
+<script type='text/javascript' src='https://codecalamity.com/wp-content/themes/minimer/js/nav.js?ver=1599010576' id='alexmedia-nav-script-js'></script>
+<script type='text/javascript' src='https://codecalamity.com/wp-content/themes/minimer/js/jquery.fitvids.js?ver=5.6' id='minimer-fitvids-js'></script>
+<script type='text/javascript' src='https://codecalamity.com/wp-content/themes/minimer/js/jq-sticky-anything.min.js?ver=5.6' id='minimer-jq-sticky-anything-js'></script>
+<script type='text/javascript' src='https://codecalamity.com/wp-content/themes/minimer/js/scripts.js?ver=5.6' id='minimer-scripts-js'></script>
+<script type='text/javascript' src='https://c0.wp.com/c/5.6/wp-includes/js/comment-reply.min.js' id='comment-reply-js'></script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/9.3.1/_inc/build/postmessage.min.js' id='postmessage-js'></script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/9.3.1/_inc/build/jquery.jetpack-resize.min.js' id='jetpack_resize-js'></script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/9.3.1/modules/likes/queuehandler.js' id='jetpack_likes_queuehandler-js'></script>
+<script type='text/javascript' src='https://codecalamity.com/wp-content/plugins/enlighter/cache/enlighterjs.min.js?ver=+gY65geVXoabMLM' id='enlighterjs-js'></script>
+<script type='text/javascript' id='enlighterjs-js-after'>
+!function(e,n){if("undefined"!=typeof EnlighterJS){var o={"selectors":{"block":"pre.EnlighterJSRAW","inline":"code.EnlighterJSRAW"},"options":{"indent":2,"ampersandCleanup":true,"linehover":true,"rawcodeDbclick":false,"textOverflow":"break","linenumbers":false,"theme":"enlighter","language":"python","retainCssClasses":false,"collapse":false,"toolbarOuter":"","toolbarTop":"{BTN_RAW}{BTN_COPY}{BTN_WINDOW}{BTN_WEBSITE}","toolbarBottom":""}};(e.EnlighterJSINIT=function(){EnlighterJS.init(o.selectors.block,o.selectors.inline,o.options)})()}else{(n&&(n.error||n.log)||function(){})("Error: EnlighterJS resources not loaded yet!")}}(window,console);
+</script>
+<script type='text/javascript' src='https://codecalamity.com/wp-content/plugins/complianz-gdpr/assets/js/cookieconsent.min.js?ver=4.9.3' id='cmplz-cookie-js'></script>
+<script type='text/javascript' id='cmplz-cookie-config-js-extra'>
+/* <![CDATA[ */
+var complianz = {"static":"","set_cookies":[],"block_ajax_content":"","banner_version":"17","version":"4.9.3","a_b_testing":"","do_not_track":"","consenttype":"optout","region":"us","geoip":"","categories":"","position":"bottom","title":"","theme":"edgeless","checkbox_style":"square","use_categories":"no","use_categories_optinstats":"no","accept":"Accept","revoke":"Settings","dismiss":"Functional Cookies Only","dismiss_timeout":"10","popup_background_color":"#f4f4f4","popup_text_color":"#020202","button_background_color":"#fff","button_text_color":"#0066bf","accept_all_background_color":"#0085ba","accept_all_text_color":"#fff","accept_all_border_color":"#0073aa","functional_background_color":"#f4f4f4","functional_text_color":"#020202","functional_border_color":"#f4f4f4","border_color":"","use_custom_cookie_css":"","custom_css":".cc-window","custom_css_amp":"#cmplz-consent-ui, #cmplz-post-consent-ui {} \n#cmplz-consent-ui .cmplz-consent-message {} \n#cmplz-consent-ui button, #cmplz-post-consent-ui button {}","readmore_optin":"Read more","readmore_impressum":"Impressum","accept_informational":"Accept","message_optout":"We use cookies to optimize our website and our service.","message_optin":"We use cookies to optimize our website and our service. Sorry for the law required bother.","readmore_optout":"Cookie Policy (US)","readmore_optout_dnsmpi":"Do Not Sell My Personal Information","hide_revoke":"cc-hidden","banner_width":"","soft_cookiewall":"","type":"opt-in","layout":"basic","dismiss_on_scroll":"","dismiss_on_timeout":"","cookie_expiry":"365","nonce":"eba3cff5b5","url":"https:\/\/codecalamity.com\/wp-json\/complianz\/v1\/?lang=en","set_cookies_on_root":"","cookie_domain":"","current_policy_id":"12","cookie_path":"\/","tcf_active":"","readmore_url":{"us":"https:\/\/codecalamity.com\/cookie-policy-us-3\/"},"privacy_link":{"us":""},"placeholdertext":"Click to accept marketing cookies and enable this content"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://codecalamity.com/wp-content/plugins/complianz-gdpr/assets/js/complianz.min.js?ver=4.9.3' id='cmplz-cookie-config-js'></script>
+<script type='text/javascript' src='https://c0.wp.com/c/5.6/wp-includes/js/wp-embed.min.js' id='wp-embed-js'></script>
+<script type='text/javascript' id='jetpack-carousel-js-extra'>
+/* <![CDATA[ */
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/codecalamity.com\/wp-admin\/admin-ajax.php","nonce":"989a710d65","display_exif":"1","display_comments":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/codecalamity.com\/wp-login.php?redirect_to=https%3A%2F%2Fcodecalamity.com%2Fraspberry-pi-hardware-accelerated-h264-webcam-security-camera%2F","blog_id":"1","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/9.3.1/_inc/build/carousel/jetpack-carousel.min.js' id='jetpack-carousel-js'></script>
+<script type='text/javascript' src='https://codecalamity.com/wp-content/plugins/easy-table-of-contents/vendor/smooth-scroll/jquery.smooth-scroll.min.js?ver=2.2.0' id='jquery-smooth-scroll-js'></script>
+<script type='text/javascript' src='https://codecalamity.com/wp-content/plugins/easy-table-of-contents/vendor/js-cookie/js.cookie.min.js?ver=2.2.1' id='js-cookie-js'></script>
+<script type='text/javascript' src='https://codecalamity.com/wp-content/plugins/easy-table-of-contents/vendor/sticky-kit/jquery.sticky-kit.min.js?ver=1.9.2' id='jquery-sticky-kit-js'></script>
+<script type='text/javascript' id='ez-toc-js-js-extra'>
+/* <![CDATA[ */
+var ezTOC = {"smooth_scroll":"1","visibility_hide_by_default":"","width":"auto","scroll_offset":"30"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://codecalamity.com/wp-content/plugins/easy-table-of-contents/assets/js/front.min.js?ver=2.0.11-1588969491' id='ez-toc-js-js'></script>
+<script async="async" type='text/javascript' src='https://codecalamity.com/wp-content/plugins/akismet/_inc/form.js?ver=4.1.8' id='akismet-form-js'></script>
+<script type='text/javascript' id='sharing-js-js-extra'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/9.3.1/_inc/build/sharedaddy/sharing.min.js' id='sharing-js-js'></script>
+<script type='text/javascript' id='sharing-js-js-after'>
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+</script>
+	<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	<!-- Statistics script Complianz GDPR/CCPA -->
+<script type="text/javascript" class="cmplz-stats cmplz-native"></script>	<iframe src='https://widgets.wp.com/likes/master.html?ver=202103#ver=202103' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+	<div id='likes-other-gravatars'><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+	
+		<!--[if IE]>
+		<script type="text/javascript">
+			if ( 0 === window.location.hash.indexOf( '#comment-' ) ) {
+				// window.location.reload() doesn't respect the Hash in IE
+				window.location.hash = window.location.hash;
+			}
+		</script>
+		<![endif]-->
+		<script type="text/javascript">
+			(function () {
+				var comm_par_el = document.getElementById( 'comment_parent' ),
+					comm_par = ( comm_par_el && comm_par_el.value ) ? comm_par_el.value : '',
+					frame = document.getElementById( 'jetpack_remote_comment' ),
+					tellFrameNewParent;
+
+				tellFrameNewParent = function () {
+					if ( comm_par ) {
+						frame.src = "https://jetpack.wordpress.com/jetpack-comment/?blogid=121112347&postid=1041&comment_registration=0&require_name_email=1&stc_enabled=1&stb_enabled=1&show_avatars=1&avatar_default=blank&greeting=Thoughts%2C+issues%2C+comments%3F+Leave+a+reply...&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en_US&jetpack_version=9.3.1&show_cookie_consent=0&has_cookie_consent=0&token_key=%3Bnormal%3B&sig=4eef1232931d05fae900a7467b0e3e400fdf650d#parent=https%3A%2F%2Fcodecalamity.com%2Fraspberry-pi-hardware-accelerated-h264-webcam-security-camera%2F" + '&replytocom=' + parseInt( comm_par, 10 ).toString();
+					} else {
+						frame.src = "https://jetpack.wordpress.com/jetpack-comment/?blogid=121112347&amp;postid=1041&amp;comment_registration=0&amp;require_name_email=1&amp;stc_enabled=1&amp;stb_enabled=1&amp;show_avatars=1&amp;avatar_default=blank&amp;greeting=Thoughts%2C+issues%2C+comments%3F+Leave+a+reply...&amp;greeting_reply=Leave+a+Reply+to+%25s&amp;color_scheme=light&amp;lang=en_US&amp;jetpack_version=9.3.1&amp;show_cookie_consent=0&amp;has_cookie_consent=0&amp;token_key=%3Bnormal%3B&amp;sig=4eef1232931d05fae900a7467b0e3e400fdf650d#parent=https%3A%2F%2Fcodecalamity.com%2Fraspberry-pi-hardware-accelerated-h264-webcam-security-camera%2F";
+					}
+				};
+
+				
+				if ( 'undefined' !== typeof addComment ) {
+					addComment._Jetpack_moveForm = addComment.moveForm;
+
+					addComment.moveForm = function ( commId, parentId, respondId, postId ) {
+						var returnValue = addComment._Jetpack_moveForm( commId, parentId, respondId, postId ),
+							cancelClick, cancel;
+
+						if ( false === returnValue ) {
+							cancel = document.getElementById( 'cancel-comment-reply-link' );
+							cancelClick = cancel.onclick;
+							cancel.onclick = function () {
+								var cancelReturn = cancelClick.call( this );
+								if ( false !== cancelReturn ) {
+									return cancelReturn;
+								}
+
+								if ( ! comm_par ) {
+									return cancelReturn;
+								}
+
+								comm_par = 0;
+
+								tellFrameNewParent();
+
+								return cancelReturn;
+							};
+						}
+
+						if ( comm_par == parentId ) {
+							return returnValue;
+						}
+
+						comm_par = parentId;
+
+						tellFrameNewParent();
+
+						return returnValue;
+					};
+				}
+
+				
+				// Do the post message bit after the dom has loaded.
+				document.addEventListener( 'DOMContentLoaded', function () {
+					var iframe_url = "index.html\/\/jetpack.wordpress.com";
+					if ( window.postMessage ) {
+						if ( document.addEventListener ) {
+							window.addEventListener( 'message', function ( event ) {
+								var origin = event.origin.replace( /^http:\/\//i, 'https:///' );
+								if ( iframe_url.replace( /^http:\/\//i, 'https:///' ) !== origin ) {
+									return;
+								}
+								jQuery( frame ).height( event.data );
+							});
+						} else if ( document.attachEvent ) {
+							window.attachEvent( 'message', function ( event ) {
+								var origin = event.origin.replace( /^http:\/\//i, 'https:///' );
+								if ( iframe_url.replace( /^http:\/\//i, 'https:///' ) !== origin ) {
+									return;
+								}
+								jQuery( frame ).height( event.data );
+							});
+						}
+					}
+				})
+
+			})();
+		</script>
+
+		<script src='https://stats.wp.com/e-202103.js' defer></script>
+<script>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:9.3.1',blog:'121112347',post:'1041',tz:'-6',srv:'codecalamity.com'} ]);
+	_stq.push([ 'clickTrackerInit', '121112347', '1041' ]);
+</script>
+</body>
+</html>
