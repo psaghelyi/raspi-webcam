@@ -10,3 +10,7 @@
 
 > $ sudo snap install v4l2rtspserver --edge
 > 
+
+
+https://github.com/cdgriffith/pi_streaming_setup/tree/master
+
