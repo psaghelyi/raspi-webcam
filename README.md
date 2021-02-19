@@ -28,6 +28,10 @@ ffmpeg -nostdin -hide_banner -loglevel error \
 ```
 ### Mpeg-dash
 
+`sudo python3 streaming_setup.py`
+
+edit `/etc/systemd/system/stream_camera.service`
+
 ```
 ffmpeg -nostdin -hide_banner -loglevel error \
 -f v4l2 -input_format h264 -s 1280x720 -i /dev/video0 \
