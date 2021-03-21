@@ -55,21 +55,22 @@ ffmpeg -use_wallclock_as_timestamps 1 -fflags nobuffer -hide_banner -loglevel er
 h264 raspicam correction of sound delay...
 
 ```
-/usr/bin/raspivid -t 0 -n -a 12 -b 1000000 -pf high --mode 5 -fps 15 -g 30 --flush -ih -o - | ffmpeg \
+/usr/bin/raspivid -t 0 -n -a 12 -b 1000000 -pf high --mode 5 -fps 15 -g 30 -ih -rot 180 -o - | \
+ffmpeg -use_wallclock_as_timestamps 1 -fflags nobuffer -nostdin -hide_banner -loglevel error \
 -f alsa -thread_queue_size 1024 -ar 44100 -channel_layout mono -ac 1 -i hw:1,0 -itsoffset 15 \
 -f h264 -thread_queue_size 1024 -i - \
 -map 1:0 -c:v copy -map 0:0 -c:a aac -b:a 64k \
--f rtsp rtsp://localhost:8554/streaming
+-f rtsp rtsp://localhost:8554/streaming1
 ```
 
 h264 stream from v4l2 device
 
 ```
-v4l2-ctl --set-fmt-video=width=1280,height=720,pixelformat="H264" -d /dev/video2
+v4l2-ctl --set-fmt-video=width=1920,height=1080,pixelformat="H264" -d /dev/video1
 
-ffmpeg -use_wallclock_as_timestamps 1 -fflags nobuffer -fflags +igndts \
--f v4l2 -thread_queue_size 1024 -input_format h264 -s 1280x720 -r 15 -i /dev/video2 \
+ffmpeg -use_wallclock_as_timestamps 1 -fflags nobuffer -fflags +igndts -nostdin -hide_banner -loglevel error \
+-f v4l2 -thread_queue_size 1024 -input_format h264 -s 1920x1080 -r 15 -i /dev/video1 \
 -c:v copy \
--f rtsp rtsp://localhost:8554/streaming
+-f rtsp rtsp://localhost:8554/streaming2
 ```
 
