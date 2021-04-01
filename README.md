@@ -1,5 +1,11 @@
 # raspi-webcam
 
+## disable swap
+
+` $ sudo dphys-swapfile swapoff && sudo dphys-swapfile uninstall && update-rc.d dphys-swapfile remove && systemctl disable dphys-swapfile`
+
+
+
 ## v4l2rtspserver
 
 > [https://github.com/mpromonet/v4l2rtspserver](v4l2rtspserver)
