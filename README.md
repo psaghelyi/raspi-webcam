@@ -2,9 +2,10 @@
 
 ## disable swap
 
-` $ sudo dphys-swapfile swapoff && sudo dphys-swapfile uninstall && update-rc.d dphys-swapfile remove && systemctl disable dphys-swapfile`
+`$ sudo dphys-swapfile swapoff && sudo dphys-swapfile uninstall && update-rc.d dphys-swapfile remove && systemctl disable dphys-swapfile`
 
-
+## mount NFS folder under Mac
+`$ sudo mount -t nfs -o nolocks,resvport,locallocks 192.168.0.5:/nfs/dev ./CodeRemote`
 
 ## v4l2rtspserver
 
