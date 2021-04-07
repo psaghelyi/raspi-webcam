@@ -20,6 +20,19 @@ $ sudo snap install v4l2rtspserver --edge
 
 `$ sudo apt-get install wicd-curses`
 
+### another solution:
+
+In `/etc/network/interfaces` put:
+
+```
+allow-hotplug wlan0
+iface wlan0 inet manual
+wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
+iface default inet dhcp
+```
+
+The roaming allows the interface to self-heal.
+
 ## rtsp-simple-server & ffmpeg streaming with audio
 
 https://github.com/cdgriffith/pi_streaming_setup/tree/master
