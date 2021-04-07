@@ -16,6 +16,9 @@ $ sudo reboot
 $ sudo snap install v4l2rtspserver --edge
 ```
 
+## reconnect wifi automatically
+
+`$ sudo apt-get install wicd-curses`
 
 ## rtsp-simple-server & ffmpeg streaming with audio
 
@@ -23,7 +26,7 @@ https://github.com/cdgriffith/pi_streaming_setup/tree/master
 
 ### rtsp
 
-`sudo python3 streaming_setup.py --rtsp`
+`$ sudo python3 streaming_setup.py --rtsp`
 
 edit `/etc/systemd/system/stream_camera.service`
 
